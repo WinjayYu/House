@@ -56,16 +56,31 @@
 						<!--</transition>-->
 					</el-col>
 				</div>
+				<el-dialog title="登陆" v-model="detailVisible" :close-on-click-modal="false" style="width: 50%; margin-left:25%;padding:0px; ">
+					<el-input
+							placeholder="请输入手机号"
+							v-model="input1">
+					</el-input>
+					</br></br>
+					<el-input
+							placeholder="请输入密码"
+							v-model="input2">
+					</el-input>
+					</br></br>
+					<el-button type="primary" style="">登录</el-button>
+				</el-dialog>
 			</section>
 			<!--</el-col>-->
 
 	</el-row>
+
 </template>
 
 <script>
   export default {
     data() {
       return {
+		  detailVisible: false,
 		  currentPathName:'图标',
 		  currentPathNameParent:'数据报表',
         form: {
@@ -112,7 +127,8 @@
 
 			},
 			login:function () {
-				his.$prompt('请输入邮箱', '登录', {
+				this.detailVisible = true;
+				/*his.$prompt('请输入邮箱', '登录', {
 					confirmButtonText: '确定',
 					cancelButtonText: '取消',
 					inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
@@ -127,7 +143,7 @@
 						type: 'info',
 						message: '取消输入'
 					});
-				});
+				});*/
 			}
     }
   }

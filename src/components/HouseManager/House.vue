@@ -102,7 +102,7 @@ img {
             </br>
 
             <el-form :inline="true" :model="house">
-                <el-button v-for="tag in house.tags" t ype="info" size="small">{{ tag }}</el-button>
+                <el-button v-for="tag in house.tags" type="info" size="small">{{ tag }}</el-button>
             </el-form>
 
             </br>
