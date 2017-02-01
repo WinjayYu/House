@@ -41,8 +41,8 @@ img {
     <template>
         <el-table :data="list" highlight-current-row v-loading="listLoading" border style="width: 100%;top: 0px;
         		bottom: 0px;" :height="height">
-            <el-table-column prop="id" label="房屋ID" width="80">
-            </el-table-column>
+            <!--<el-table-column prop="id" label="房屋ID" width="80">
+            </el-table-column>-->
             <el-table-column prop="title" label="标题" width="180">
             </el-table-column>
             <el-table-column prop="area" label="面积/m²" width="100">
@@ -54,7 +54,7 @@ img {
             <el-table-column label="小区" width="150">
                 <template scope="scope">
                     <el-popover trigger="hover" placement="left">
-                        <p>小区ID: {{ scope.row.community.uid }}</p>
+                        <!--<p>小区ID: {{ scope.row.community.uid }}</p>-->
                         <p>地址: {{ scope.row.community.address }}</p>
                         <p>城市: {{ scope.row.community.city }}</p>
                         <p>纬度: {{ scope.row.community.latitude }}</p>

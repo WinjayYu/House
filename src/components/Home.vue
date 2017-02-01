@@ -8,7 +8,7 @@
 					<img src="../assets/web_title.png" class="logo">
 				</el-col>
 
-				<h5 class="admin"><i class="fa fa-user" aria-hidden="true" style="margin-right:5px;"></i>欢迎系统管理员：Admin</h5>
+				<h5 class="admin"><i class="fa fa-user" aria-hidden="true" style="margin-right:5px;"></i>欢迎您：Winjay</h5>
 
 				<el-menu style="border-top: 1px solid #475669;" default-active="/echarts" class="el-menu-vertical-demo" @open="handleopen"
 					@close="handleclose" @select="handleselect" theme="dark" unique-opened router>
@@ -25,22 +25,27 @@
 			<!--</el-col>-->
 			<!--<el-col :span="20" class="panel-c-c">-->
 			<section class="panel-c-c">
-				<el-col :span="24" class="panel-top">
+				<el-row :span="24" class="panel-top">
 					<!-- <el-col :span="20" style="font-size:20px;">
 					</el-col> -->
-					<el-col :span="4" :offset="20">
+					<el-row :span="4" :offset="20">
 						<el-tooltip class="item tip-logout" effect="dark" content="退出" placement="bottom" style="padding:0px;">
 							<!--<i class="logout" v-on:click="logout"></i>-->
 							<i class="fa fa-sign-out" aria-hidden="true" v-on:click="logout"></i>
 						</el-tooltip>
-					</el-col>
-				</el-col>
+						<el-tooltip class="item tip-logout" effect="dark" content="登录" placement="bottom" style="padding:0px;">
+							<!--<i class="logout" v-on:click="logout"></i>-->
+							<i class="fa  fa-sign-in" aria-hidden="true" v-on:click="login"></i>
+						</el-tooltip>
+					</el-row>
+
+				</el-row>
 
 				<div class="grid-content bg-purple-light panel-content">
 					<el-col :span="24" style="margin-bottom:15px;">
 						<strong style="width:200px;float:left;color: #475669;">{{currentPathName}}</strong>
 						<el-breadcrumb separator="/" style="float:right;">
-							<el-breadcrumb-item :to="{ path: '/echarts' }">首页</el-breadcrumb-item>
+							<el-breadcrumb-item :to="{ path: '/House' }">首页</el-breadcrumb-item>
 							<el-breadcrumb-item v-if="currentPathNameParent!=''">{{currentPathNameParent}}</el-breadcrumb-item>
 							<el-breadcrumb-item v-if="currentPathName!=''">{{currentPathName}}</el-breadcrumb-item>
 						</el-breadcrumb>
@@ -99,12 +104,30 @@
 				this.$confirm('确认退出吗?', '提示', {
 					//type: 'warning'
 				}).then(() => {
-					_this.$router.replace('/login');
+					_this.$router.replace('/House');
 				}).catch(() => {
 
 				});
 
 
+			},
+			login:function () {
+				his.$prompt('请输入邮箱', '登录', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
+					inputErrorMessage: '邮箱格式不正确'
+				}).then(({value}) => {
+					this.$message({
+						type: 'success',
+						message: '你的邮箱是: ' + value
+					});
+				}).catch(() => {
+					this.$message({
+						type: 'info',
+						message: '取消输入'
+					});
+				});
 			}
     }
   }

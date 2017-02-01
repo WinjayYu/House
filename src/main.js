@@ -37,13 +37,13 @@ AMap.initAMapApiLoader({
 });
 
 const routes = [
-  {
+  /*{
     path: '/login',
     component: Login,
     hidden: true//不显示在导航中
   },
-  //{ path: '/main', component: Main },
-  {
+  //{ path: '/main', component: Main },*/
+  /*{
     path: '/',
     component: Home,
     name: '',
@@ -52,27 +52,29 @@ const routes = [
     children: [
       { path: '/echarts', component: echarts, name: '数据统计' }
     ]
-  },
+  },*/
   {
     path: '/',
     component: Home,
-    name: '用户管理',
-    iconCls: 'fa fa-user-o',//图标样式class
+    name: '',
+    iconCls: 'fa fa-university',
+    leaf:true,
     children: [
-      //{ path: '/main', component: Main },
-      { path: '/UnCheckAgent', component: UnCheckAgent, name: '经纪人审核' },
-      { path: '/Agent', component: Agent, name: '经纪人' },
-      { path: '/User', component: User, name: '普通用户' },
+      /* { path: '/UnCheckHouse', component: UnCheckHouse, name: '房源审核' },*/
+      { path: '/House', component: House, name: '房源列表' }
     ]
   },
   {
     path: '/',
     component: Home,
-    name: '房源管理',
-    iconCls: 'fa fa-university',
+    name: '',
+    iconCls: 'fa fa-user-o',//图标样式class
+    leaf:true,
     children: [
-      { path: '/UnCheckHouse', component: UnCheckHouse, name: '房源审核' },
-      { path: '/House', component: House, name: '房源列表' }
+      //{ path: '/main', component: Main },
+      /*{ path: '/UnCheckAgent', component: UnCheckAgent, name: '经纪人审核' },*/
+      { path: '/Agent', component: Agent, name: '经纪人' },
+     /* { path: '/User', component: User, name: '普通用户' },*/
     ]
   },
   {

@@ -58,8 +58,8 @@ img {
     <template>
         <el-table :data="list" highlight-current-row v-loading="listLoading" border style="width: 100%;top: 0px;
         		bottom: 0px;" :height="height">
-            <el-table-column prop="id" label="房屋ID" width="80">
-            </el-table-column>
+            <!--<el-table-column prop="id" label="房屋ID" width="80">
+            </el-table-column>-->
             <el-table-column prop="title" label="标题" width="180">
             </el-table-column>
             <el-table-column prop="area" label="面积/m²" width="100">

@@ -13,7 +13,7 @@
 		components: {
 		},
 		created: function () {
-			this.$router.replace('/login')
+			this.$router.replace('/House')
 		}
 	}
 </script>
@@ -91,4 +91,5 @@
 		vertical-align: baseline;
 		margin-right: 10px;
 	}
+
 </style>
