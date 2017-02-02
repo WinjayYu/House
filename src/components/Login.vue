@@ -45,7 +45,7 @@
         this.$refs.ruleForm2.validate((valid) => {
           if (valid) {
             //_this.$router.push('/table');
-            _this.$router.replace('/echarts');
+            _this.$router.replace('/House');
           } else {
             console.log('error submit!!');
             return false;

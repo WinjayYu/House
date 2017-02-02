@@ -37,7 +37,7 @@ AMap.initAMapApiLoader({
 });
 
 const routes = [
-  /*{
+  {
     path: '/login',
     component: Login,
     hidden: true//不显示在导航中

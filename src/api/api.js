@@ -5,8 +5,8 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-const baseUrl = 'https://zaja.xin/zaja'
-// const baseUrl = 'http://localhost:8080/zaja'
+
+//const baseUrl = 'http://localhost:8080/zaja'
 
 export default {
 
@@ -40,7 +40,12 @@ export default {
   {
     Vue.http.options.emulateJSON = true;
     return Vue.resource(baseUrl + '/back/reviewhouse').save({},params)
+  },
+  //登录
+  login:(params) =>
+  {
+    Vue.http.options.emulateJSON = true;
+    return Vue.resource(baseUrl + '/api/user/login').save({}.params)
   }
-
 
 }
