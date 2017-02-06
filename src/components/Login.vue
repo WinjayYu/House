@@ -9,19 +9,20 @@
     </el-form-item>
     <el-checkbox v-model="checked" checked style="margin:0px 0px 35px 0px;">记住密码</el-checkbox>
     <el-form-item style="width:100%;">
-      <el-button type="primary" style="width:100%;" @click.native.prevent="handleSubmit2">登录</el-button>
+      <el-button type="primary" style="width:100%;" @click.native.prevent="handleSubmit2" :loading="logining">登录</el-button>
       <!--<el-button @click.native.prevent="handleReset2">重置</el-button>-->
     </el-form-item>
   </el-form>
 </template>
 
 <script>
+    import Api from '../api/api'
   export default {
     data() {
       return {
         ruleForm2: {
-          account: '',
-          checkPass: ''
+          account: '15337203831',
+          checkPass: '123456'
         },
         rules2: {
           account: [
@@ -44,8 +45,26 @@
         var _this=this;
         this.$refs.ruleForm2.validate((valid) => {
           if (valid) {
-            //_this.$router.push('/table');
-            _this.$router.replace('/House');
+              this.logining = true;
+              var loginParams = { mobile: this.ruleForm2.account, password: this.ruleForm2.checkPass };
+              Api.login(loginParams).then(response => {
+                  this.logining = false;
+                  console.log(response);
+                  let {status, msg, user } = data;
+                  if (response.data.status !== 0) {
+                      this.$notify({
+                          title: '错误',
+                          message: msg,
+                          type: 'error'
+                      });
+                  } else {
+                      sessionStorage.setItem('user', JSON.stringify(user));
+                      this.$router.push({ path: '/House' });
+                      _this.$router.replace('/House');
+                  }
+              });
+              //_this.$router.push('/table');
+//            _this.$router.replace('/House');
           } else {
             console.log('error submit!!');
             return false;
