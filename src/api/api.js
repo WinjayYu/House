@@ -10,7 +10,7 @@ const baseUrl = 'https://ylili.cn/zaja';
 
 export default {
 
-  //获取未审核经纪人列表
+  //获取未审核经纪人
   getUnCheckAgentList:(params) =>
   {
     Vue.http.options.emulateJSON = true;
