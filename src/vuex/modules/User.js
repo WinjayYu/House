@@ -34,7 +34,7 @@ const actions = {
             commit(POST_USER_LIST_FAIL, err)
         })
     },
-    user({commit}, params){
+    login ({commit}, params){
         Api.login(params).then(response => {
             if (response.data.status === 0) {
                 commit(response.data);
