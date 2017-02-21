@@ -49,22 +49,22 @@
               var loginParams = { mobile: this.ruleForm2.account, password: this.ruleForm2.checkPass };
               Api.login(loginParams).then(response => {
                   this.logining = false;
-                  console.log(response);
-                  let {status, msg, user } = data;
                   if (response.data.status !== 0) {
                       this.$notify({
                           title: '错误',
-                          message: msg,
+                          message: "用户名或密码错误！",
                           type: 'error'
                       });
                   } else {
-                      sessionStorage.setItem('user', JSON.stringify(user));
-                      this.$router.push({ path: '/House' });
+                      sessionStorage.setItem('user', JSON.stringify(response.data.data.user));
+//                      console.log("---"+response.data.data.user.username);
+//                      console.log(response.data.status);
                       _this.$router.replace('/House');
                   }
+
+              }).catch((e) => {
+                  _this.$router.push({ path: '/House' });
               });
-              //_this.$router.push('/table');
-//            _this.$router.replace('/House');
           } else {
             console.log('error submit!!');
             return false;

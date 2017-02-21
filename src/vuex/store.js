@@ -6,6 +6,7 @@ import UnCheckAgent from './modules/UnCheckAgent'
 import Agent from './modules/Agent'
 import User from './modules/User'
 import House from './modules/House'
+import Order from './modules/Order'
 
 
 Vue.use(Vuex)
@@ -17,7 +18,8 @@ export default new Vuex.Store({
       UnCheckAgent,
       Agent,
       User,
-      House
+      House,
+      Order
     },
     actions,
     getters

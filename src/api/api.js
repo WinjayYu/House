@@ -5,7 +5,7 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-const baseUrl = 'https://ylili.cn/zaja';
+const baseUrl = 'http://ylili.cn/zaja';
 //const baseUrl = 'http://localhost:8080/zaja'
 
 export default {
@@ -46,6 +46,20 @@ export default {
   {
     Vue.http.options.emulateJSON = true;
     return Vue.resource(baseUrl + '/api/user/login').save({},params)
-  }
+  },
+
+  //注册
+    register:(params) =>
+    {
+        Vue.http.options.emulateJSON = true;
+        return Vue.resource(baseUrl + '/api/user/register').save({},params)
+
+    },
+    orderList:(params) =>
+    {
+        Vue.http.options.emulateJSON = true;
+        return Vue.resource(baseUrl + '/api/order/listorder').save({},params)
+
+    }
 
 }
