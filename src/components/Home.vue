@@ -17,7 +17,7 @@
                         <span class="el-dropdown-link" style="color:#c0ccda;cursor: pointer;">
                             <img :src="this.sysUserAvatar" class="head" style="width: 40%; margin-left: 80px; border-radius:50%"></span>
                     <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item>我的消息</el-dropdown-item>
+                        <el-dropdown-item @click.native="userCenter">个人中心</el-dropdown-item>
                         <el-dropdown-item>设置</el-dropdown-item>
                         <el-dropdown-item divided @click.native="logout">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
@@ -140,6 +140,10 @@
 
             login() {
                 this.$router.replace('/login');
+            },
+            userCenter() {
+                console.log("----");
+                this.$router.replace('/userCenter');
             },
 
             register() {

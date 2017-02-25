@@ -5,8 +5,8 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-const baseUrl = 'http://ylili.cn/zaja';
-//const baseUrl = 'http://localhost:8080/zaja'
+//export const baseUrl = 'http://ylili.cn/zaja';
+const baseUrl = 'http://localhost:8080/zaja'
 
 export default {
 
@@ -17,7 +17,7 @@ export default {
     return Vue.resource(baseUrl + '/back/uncheckagents').save({},params)
   },
 
-  //审核经纪人
+  //审核经纪人 a
   reviewOperation:(params) =>
   {
     Vue.http.options.emulateJSON = true;
@@ -60,6 +60,10 @@ export default {
         Vue.http.options.emulateJSON = true;
         return Vue.resource(baseUrl + '/api/order/listorder').save({},params)
 
+    },
+    headUpload:(params) =>
+    {
+      Vue.http.options.emulateJSON = true;
+      return Vue.resource(baseUrl + '/api/user/head').save({},params)
     }
-
 }

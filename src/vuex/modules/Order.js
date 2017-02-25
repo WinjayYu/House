@@ -9,9 +9,8 @@ const state = {
 }
 
 const getters = {
-    orderList: state => {
-        state.orderList
-    }
+    orderList: state => state.orderList //不要花括号
+
 }
 
 const actions = {

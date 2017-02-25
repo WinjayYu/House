@@ -63,7 +63,11 @@
                   }
 
               }).catch((e) => {
-                  _this.$router.push({ path: '/House' });
+                  this.$notify({
+                      title: '错误',
+                      message: "用户名或密码错误！",
+                      type: 'error'
+                  });
               });
           } else {
             console.log('error submit!!');

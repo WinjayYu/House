@@ -14,6 +14,7 @@ import AMap from 'vue-amap';
 
 import Login from './components/Login.vue'
 import Register from './components/Register.vue'
+import UserCenter from './components/UserCenter.vue'
 import Home from './components/Home.vue'
 import Main from './components/Main.vue'
 import UnCheckAgent from './components/UserManager/UnCheckAgent.vue'
@@ -46,6 +47,11 @@ const routes = [
     {
         path: '/register',
         component: Register,
+        hidden: true//不显示在导航中
+    },
+    {
+        path: '/userCenter',
+        component: UserCenter,
         hidden: true//不显示在导航中
     },
     //{ path: '/main', component: Main },*/

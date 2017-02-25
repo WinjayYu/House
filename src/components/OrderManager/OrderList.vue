@@ -1,38 +1,25 @@
 <template>
 
     <section>
-        <!--&lt;!&ndash;工具条&ndash;&gt;-->
-        <!--<el-col :span="24" class="toolbar">-->
-            <!--<el-form :inline="true" :model="formInline" class="demo-form-inline">-->
-                <!--<el-form-item>-->
-                    <!--<el-input v-model="mobile" placeholder="手机号"></el-input>-->
-                <!--</el-form-item>-->
-                <!--<el-form-item>-->
-                    <!--<el-button @click="handleSearch">查询</el-button>-->
-                <!--</el-form-item>-->
-            <!--</el-form>-->
-        <!--</el-col>-->
-
         <!--列表-->
-        <template>
             <el-table :data="list" highlight-current-row v-loading="listLoading" border style="width: 100%;top: 0px;
         		bottom: 0px;" :height="height">
                 <!--<el-table-column prop="id" label="房屋ID" width="80">
                 </el-table-column>-->
-                <el-table-column prop="code" label="订单号" width="180">
+                <el-table-column prop="code" label="订单号" width="200">
                 </el-table-column>
                 <el-table-column prop="price" label="价格/万" width="100">
                 </el-table-column>
-                <el-table-column prop="commission" label="佣金" width="150">
+                <el-table-column prop="commission" label="佣金/元" width="150">
                 </el-table-column>
 
                 <el-table-column prop="floor" label="楼层" width="110">
                 </el-table-column>
-                <el-table-column prop="house" label="房源" width="120">
+                <el-table-column  prop="house.title" label="房源" width="120">
                 </el-table-column>
-                <el-table-column prop="agent" label="经纪人" width="120">
+                <el-table-column prop="agent.username" label="经纪人" width="120">
                 </el-table-column>
-                <el-table-column prop="addtime" label="购买时间" width="120">
+                <el-table-column prop="addTime" label="购买时间" width="120">
                 </el-table-column>
                 <el-table-column prop="status" label="状态" width="80" :formatter="formatStatus" fixed="right">
                 </el-table-column>
@@ -43,118 +30,6 @@
 				        </span>
                 </el-table-column>
             </el-table>
-        </template>
-
-        <!--&lt;!&ndash;分页&ndash;&gt;-->
-        <!--<el-col :span="24" class="toolbar" style="padding-bottom:10px;">-->
-            <!--<el-pagination :current-page="this.currentPage" :page-size="this.pageSize" layout="total, prev, pager, next, jumper" @current-change="handleCurrentChange" style="float:right">-->
-            <!--</el-pagination>-->
-        <!--</el-col>-->
-
-        <!--&lt;!&ndash;详情界面&ndash;&gt;
-        <el-dialog :title="house.title" v-model="houseDetailVisible" :close-on-click-modal="false" >
-            <el-form :model="house" label-width="150px">
-                <div v-for="src in house.imgs">
-                    <img :src="src"></img>
-                </div>
-
-                </br>
-
-                <el-form :inline="true" :model="house">
-                    <el-button v-for="tag in house.tags" type="info" size="small">{{ tag }}</el-button>
-                </el-form>
-
-                </br>
-
-                <el-row type="flex" justify="center">
-                    <el-col :span="6">
-                        <h1>价格：{{ house.price }}万</h1></div>
-                    </el-col>
-                    <el-col :span="6">
-                        <h1>面积：{{ house.area }}m²</h1></div>
-                    </el-col>
-                    <el-col :span="6">
-                        <h1>佣金：{{ house.commission }}元</h1></div>
-                    </el-col>
-                </el-row>
-
-                <el-row type="flex" justify="center">
-                    <el-col :span="6">
-                        <p>户型：{{ house.layout }}</p>
-                        </div>
-                    </el-col>
-                    <el-col :span="6">
-                        <p>装修：{{ house.renovation }}</p>
-                        </div>
-                    </el-col>
-                    <el-col :span="6">
-                        <p>楼层：{{ house.floor }}</p>
-                        </div>
-                    </el-col>
-                </el-row>
-
-                <el-row type="flex" justify="center">
-                    <el-col :span="6">
-                        <p>朝向：{{ house.orientation }}</p>
-                        </div>
-                    </el-col>
-                    <el-col :span="6">
-                        <p>用途：{{ house.purpose }}</p>
-                        </div>
-                    </el-col>
-                    <el-col :span="6">
-                        <p>发布：{{ house.year }}</p>
-                        </div>
-                    </el-col>
-                </el-row>
-
-                </br>
-                <el-row type="flex" justify="center">
-                    <el-col :span="21">
-                        <el-collapse v-for="(val, key, index) in house.feature" v-model="activeName" accordion>
-                            <el-collapse-item :title="formatFeature(key)" :name="index">
-                                <div>{{ val }}}</div>
-                            </el-collapse-item>
-                        </el-collapse>
-                    </el-col>
-                </el-row>
-
-                </br>
-                <el-row type="flex" justify="center">
-                    <el-col :span="21">
-                        <p style="font-weight: bold;">小区：{{ house.community.name }}</p>
-                    </el-col>
-                </el-row>
-
-
-                <div class="amap-wrapper">
-                    <el-amap vid="amap" :zoom="15" :center="this.location">
-                        <el-amap-marker :position="this.location" :visible="true" :draggable="false"></el-amap-marker>
-                    </el-amap>
-                </div>
-
-                <el-row type="flex" justify="center">
-                    <el-col :span="21">
-                        <p style="font-weight: bold;">经纪人信息</p>
-                    </el-col>
-                </el-row>
-
-                <el-row type="flex" gutter="10" justify="center">
-                    <el-col :span="2">
-                        <img :src="house.agent.head" style="border-radius:50%;margin: 10px 0px 0px;">
-                    </el-col>
-                    <el-col :span="3">
-                        <p style="font-weight: bold;margin-top:20px;">{{ house.agent.username }}</p>
-                    </el-col>
-                    <el-col :span="16">
-                        <p style="font-weight: bold;margin-top:20px;">{{ house.agent.mobile }}</p>
-                    </el-col>
-                </el-row>
-
-            </el-form>
-        </el-dialog>-->
-
-
     </section>
 
 </template>
@@ -174,16 +49,21 @@
         }),
         created() {
             var user = sessionStorage.getItem('user');
-            console.log(user);
             if (user) {
                 user = JSON.parse(user);
-                console.log(user.id);
                 let params = {
-                    userId: user.id
+                    userId: user.id,
+                    pageNum: this.pageNum,
+                    pageSize: this.pageSize
                 }
                 this.$store.dispatch('orderList', params)
+            }else {
+                this.$notify({
+                    title: '提示',
+                    message: "查看订单请先登录！",
+                    type: 'error'
+                });
             }
-//           this.$store.dispatch('orderList', params)
         },
 
         data() {
@@ -191,6 +71,7 @@
 
                 currentPage: 1,
                 pageSize: 50,
+                pageNum: 1,
                 height: window.screen.availHeight - 280,
                 activeName: 0,
 
@@ -238,24 +119,6 @@
 
             },
 
-//            //显示编辑界面
-//            review(row) {
-//                this.order.id = row.id;
-//                this.order.code = row.code;
-////                this.house.tags = row.tags.split("|");
-//                this.order.price = row.price;
-//                this.order.status = row.status;
-//                this.order.commission = row.commission;
-//                this.order.floor = row.floor;
-//                this.order.discount = row.discount;
-//                this.order.house = row.house;
-//                this.order.agent = row.agent;
-////                if (row.feature.length > 0) {
-////                    this.house.feature = JSON.parse(row.feature);
-////                }
-////                this.location = [row.community.longitude, row.community.latitude];
-//                this.houseDetailVisible = true;
-//            },
             //显示新增界面
             handleSearch: function() {
 
@@ -273,7 +136,6 @@
             }
         },
         mounted() {
-            this.currentPath = this.$route.path;
             this.currentPathName = this.$route.name;
             this.currentPathNameParent = this.$route.matched[0].name;
 

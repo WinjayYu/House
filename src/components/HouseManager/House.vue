@@ -75,13 +75,16 @@ img {
             </el-table-column>
             <el-table-column prop="purpose" label="用途" width="120">
             </el-table-column>
-            <el-table-column prop="status" label="状态" width="80" :formatter="formatStatus" fixed="right">
-            </el-table-column>
+            <!--<el-table-column prop="status" label="状态" width="80" :formatter="formatStatus" fixed="right">-->
+            <!--</el-table-column>-->
 
             <el-table-column inline-template :context="_self" label="操作" width="80" fixed="right">
                 <span>
 					      <el-button type="info" size="small" @click="review(row)">查看</el-button>
 				        </span>
+            </el-table-column>
+            <el-table-column  label="购买">
+
             </el-table-column>
         </el-table>
     </template>
