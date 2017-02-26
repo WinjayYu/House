@@ -1,93 +1,89 @@
 <template>
-    <form method="POST" action="localhost:8080/zaja/api/user/head">
-        <div v-if="!image">
-            <h2>Select an image</h2><input type="file"name="image" @change="onFileChange" multiple>
-        </div>
-        <div v-else>
-            <img :src="image" />
-            <button @click="removeImage">Remove image</button>
-            <button type="submit">上传</button>
-        </div>
-    </form>
+    <el-form ref="form" :model="form">
+        <el-form-item label="头像url">
+            <el-input v-model="form.head" style="width:30%"></el-input>
+        </el-form-item>
+        <el-form-item label="性别">
+            <el-radio class="radio" v-model="form.sex" label="10">男</el-radio>
+            <el-radio class="radio" v-model="form.sex" label="20">女</el-radio>
+        </el-form-item>
+        <el-form-item label="昵称">
+            <el-input v-model="form.nickname" style="width:30%"></el-input>
+        </el-form-item>
+
+            <el-button type="primary" @click="onSubmit">立即修改</el-button>
+            <el-button>取消</el-button>
+        </el-form-item>
+    </el-form>
+
 </template>
 
 
 <script>
+    import Vue from 'vue'
     import {baseUrl} from '../api/api'
     import Api from '../api/api'
     export default {
         data() {
             return {
-                image: '',
-                url : '/api/user/head',
+                form: {
+                    head: '',
+                    nickname: '',
+                    sex:''
+                }
             };
         },
-//        methods: {
-//            handleRemove(file, fileList) {
-//                console.log(file, fileList);
-//            },
-//            handlePreview(file) {
-//                console.log(file);
-//            },
-//
-//        }
+
         methods: {
-            onFileChange(e) {
-                var files = e.target.files || e.dataTransfer.files;
-                if (!files.length)
-                    return;
-                this.createImage(files[0]);
-            },
-            createImage(file) {
-                var image = new Image();
-                var reader = new FileReader();
-                var vm = this;
+           upload(e){
+               var file = e.target.files[0];
+               console.log(file);
+               var user =  sessionStorage.getItem('user');
+               this.id = user.id;
+               let params = {
+                   id : user.id,
+                   image : file
+               }
+               Vue.http.post("http://localhost:8080/zaja/api/user/head", params).then(function (result) {
+                   let response = result.data;
+                   // console.log(response)
+                   if (parseInt(response.msg) === 1) {
+                       resolve(response.data);
+                       console.log("suss");
+                   } else {
+                       reject(response.code)
+                       console.log("err")
+                   }
+               }, function (error) {
+                   reject(error)
+                   console.log("err!")
+               }).catch((e) => {
 
-                reader.onload = (e) => {
-                    vm.image = e.target.result;
-                };
-                reader.readAsDataURL(file);
-                let params = {
-                    image : this.image
-                }
-//                Api.headUpload(params).then(response => {
-//                    if (response.data.status !== 0) {
-//                        this.$notify({
-//                            title: '错误',
-//                            message: "上传失败！",
-//                            type: 'error'
-//                        });
-//                    } else {
-//
-//                    }
-//
-//                }).catch((e) => {
-//                });
-            },
-            removeImage: function (e) {
-                this.image = '';
-            },
-            updateProfilePic: function() {
-                var picture = this.image;
-
-                this.$http.post("http://localhost/zaja/api/user/head" , picture, function() {
-                    //Do Something
-                    console.log("yaya");
-                },err => {
-
-                }).catch((e) => {
-                    console.log("kkk");
-                });
+               });
+           }
+        },
+        mounted() {
+            var user = sessionStorage.getItem('user');
+            if (user) {
+                user = JSON.parse(user);
+                console.log(user.username +"-llll");
+                this.form.username = user.username;
+                this.form.head = user.head;
+                this.form.sex = user.sex;
+                console.log(form + "dv");
             }
         }
     }
 </script>
 
-<style>
-    img {
-        width: 30%;
-        margin: auto;
-        display: block;
-        margin-bottom: 10px;
+<style scoped>
+
+    .el-form {
+        width: 300px;
+        padding: 35px 35px 15px 35px;
+        /*margin:  100px 0 0 300px;*/
+        box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.3), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+        border-radius: 5px;
+        margin: 120px auto;
     }
 </style>
