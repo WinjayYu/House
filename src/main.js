@@ -24,6 +24,8 @@ import UnCheckHouse from './components/HouseManager/UnCheckHouse.vue'
 import House from './components/HouseManager/House.vue'
 import echarts from './components/charts/echarts.vue'
 import OrderList from './components/OrderManager/OrderList.vue'
+import PublishHouse from './components/HouseManager/PublishHouse.vue'
+import RegisterAgent from './components/RegisterAgent.vue'
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
@@ -47,6 +49,11 @@ const routes = [
     {
         path: '/register',
         component: Register,
+        hidden: true//不显示在导航中
+    },
+    {
+        path: '/registerAgent',
+        component: RegisterAgent,
         hidden: true//不显示在导航中
     },
     {
@@ -99,6 +106,16 @@ const routes = [
             {path: '/OrderList', component: OrderList, name: '我的订单'}
         ]
     },
+    {
+        path: '/',
+        component: Home,
+        name: '',
+        iconCls: 'fa fa-home',
+        leaf: true,//只有一个节点
+        children: [
+            {path: '/PublishHouse', component: PublishHouse, name: '发布房源'}
+        ]
+    }
 ]
 
 const router = new VueRouter({

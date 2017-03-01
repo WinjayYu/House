@@ -9,7 +9,7 @@
                 </el-col>
 
                 <h5 class="admin"><i class="fa fa-user" aria-hidden="true" style="margin-right:5px;"></i>欢迎您
-                    <span v-if="this.user">{{sysUserName}}</span>
+                    <span v-if="this.sysUserName.length">{{sysUserName}}</span>
                     <span v-else></span>
                 </h5>
 

@@ -14,11 +14,17 @@
             <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off" placeholder="确认密码"></el-input>
         </el-form-item>
 
+        </el-form-item>
+        <el-form-item label="身份证正面" class="idcard">
+            <el-input v-model="ruleForm2.img1"></el-input>
+        </el-form-item>
+        <el-form-item label="身份证反面" class="idcard">
+            <el-input v-model="ruleForm2.img2"></el-input>
+
         <el-form-item >
             <el-button type="primary"  @click.native.prevent="handleSubmit2" :loading="register" class="reg">注册</el-button>
             <el-button @click.native.prevent="handleReset2" class="reset">重置</el-button>
         </el-form-item>
-        <el-button type="primary" size="mini" @click="registerAgent">经纪人</el-button>
     </el-form>
 </template>
 
@@ -28,6 +34,8 @@
         data() {
             return {
                 ruleForm2: {
+                    img1: '',
+                    img2: '',
                     account: '',
                     pass: '',
                     checkPass: ''
@@ -43,16 +51,19 @@
                     ],
                     checkPass: [
                         { required: true, message: '请输入确认密码', trigger: 'blur' },
-                        //{ validator: validaePass2 }
                     ],
+                    img1: [
+                        { required: true, message: '请输入身份证url', trigger: 'blur' },
+                    ],
+                    img2: [
+                        { required: true, message: '请输入身份证url', trigger: 'blur' },
+                    ],
+
                 },
                 checked: true
             };
         },
         methods: {
-            registerAgent() {
-                this.$router.replace('/registerAgent');
-            },
             handleReset2() {
                 this.$refs.ruleForm2.resetFields();
             },
@@ -140,5 +151,8 @@
         margin-left: 0px;
         display: inline;
         float: left;
+    }
+    .idcard {
+        width: 200px;
     }
 </style>

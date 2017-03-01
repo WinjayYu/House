@@ -72,5 +72,20 @@ export default {
         }).catch((e) => {
 
         });
+    },
+
+    update: (params) => {
+        Vue.http.options.emulateJSON = true;
+        return Vue.resource(baseUrl + '/api/user/update').save({}, params)
+
+    },
+    publishHouse: (params) => {
+        Vue.http.options.emulateJSON = true;
+        return Vue.resource(baseUrl + '/api/agent/publishhouse').save({}, params)
+
+    },
+    RegisterAgent:(params) => {
+        Vue.http.options.emulateJSON = true;
+        return Vue.resource(baseUrl + '/api/agent/register').save({}, params)
     }
 }

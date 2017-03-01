@@ -1,14 +1,15 @@
 <template>
     <el-form ref="form" :model="form">
+        <h2 style="margin-top:0">基本资料</h2>
         <el-form-item label="头像url">
-            <el-input v-model="form.head" style="width:30%"></el-input>
+            <el-input v-model="form.head" style="width:70%"></el-input>
         </el-form-item>
         <el-form-item label="性别">
             <el-radio class="radio" v-model="form.sex" label="10">男</el-radio>
             <el-radio class="radio" v-model="form.sex" label="20">女</el-radio>
         </el-form-item>
         <el-form-item label="昵称">
-            <el-input v-model="form.nickname" style="width:30%"></el-input>
+            <el-input v-model="form.username" style="margin-left:15px; width:70%"></el-input>
         </el-form-item>
 
             <el-button type="primary" @click="onSubmit">立即修改</el-button>
@@ -27,50 +28,48 @@
         data() {
             return {
                 form: {
+                    id: '',
                     head: '',
-                    nickname: '',
-                    sex:''
+                    username: '',
+                    sex: ''
                 }
             };
         },
 
         methods: {
-           upload(e){
-               var file = e.target.files[0];
-               console.log(file);
-               var user =  sessionStorage.getItem('user');
-               this.id = user.id;
-               let params = {
-                   id : user.id,
-                   image : file
-               }
-               Vue.http.post("http://localhost:8080/zaja/api/user/head", params).then(function (result) {
-                   let response = result.data;
-                   // console.log(response)
-                   if (parseInt(response.msg) === 1) {
-                       resolve(response.data);
-                       console.log("suss");
-                   } else {
-                       reject(response.code)
-                       console.log("err")
-                   }
-               }, function (error) {
-                   reject(error)
-                   console.log("err!")
-               }).catch((e) => {
+            onSubmit: function () {
+                Api.update(this.form).then(response => {
+                    this.logining = false;
+                    let _this = this;
+                    if (response.data.status !== 0) {
+                        this.$notify({
+                            title: '错误',
+                            message: "更新失败！",
+                            type: 'error'
+                        });
+                    } else {
+                        sessionStorage.setItem('user', JSON.stringify(response.data.data.user));
+                        _this.$router.replace('/House');
+                    }
 
-               });
-           }
+                }).catch((e) => {
+                    this.$notify({
+                        title: '错误',
+                        message: "出错了！",
+                        type: 'error'
+                    });
+                });
+            }
         },
-        mounted() {
+        created() {
             var user = sessionStorage.getItem('user');
             if (user) {
                 user = JSON.parse(user);
                 console.log(user.username +"-llll");
+                this.form.id = user.id;
                 this.form.username = user.username;
                 this.form.head = user.head;
                 this.form.sex = user.sex;
-                console.log(form + "dv");
             }
         }
     }
