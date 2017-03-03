@@ -5,8 +5,8 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-//export const baseUrl = 'http://ylili.cn/zaja';
-const baseUrl = 'http://localhost:8080/zaja'
+export const baseUrl = 'http://ylili.cn/zaja';
+//const baseUrl = 'http://localhost:8080/zaja'
 
 export default {
 

@@ -83,8 +83,10 @@ img {
 					      <el-button type="info" size="small" @click="review(row)">查看</el-button>
 				        </span>
             </el-table-column>
-            <el-table-column  label="购买">
-
+            <el-table-column inline-template :context="_self" label="操作" width="80" fixed="right">
+                <span>
+					      <el-button type="info" size="small" @click="payment(row)">购买</el-button>
+				        </span>
             </el-table-column>
         </el-table>
     </template>
@@ -95,6 +97,58 @@ img {
         </el-pagination>
     </el-col>
 
+    <!--购买界面-->
+    <el-dialog :title="house.title" v-model="paymentVisible" :close-on-click-modal="false">
+        <el-form :model="house" label-width="150px">
+
+            <el-row type="flex" justify="center">
+                <el-col :span="6">
+                    <h1>佣金：{{ house.commission }}元</h1></div>
+                </el-col>
+                <el-col :span="6">
+                    <h1>价格：{{ house.price }}万</h1></div>
+                </el-col>
+                <el-col :span="6">
+                    <h1>面积：{{ house.area }}m²</h1></div>
+                </el-col>
+            </el-row>
+
+            <el-row type="flex" justify="center">
+                <el-col :span="6">
+                    <p>户型：{{ house.layout }}</p>
+                    </div>
+                </el-col>
+                <el-col :span="6">
+                    <p>装修：{{ house.renovation }}</p>
+                    </div>
+                </el-col>
+                <el-col :span="6">
+                    <p>楼层：{{ house.floor }}</p>
+                    </div>
+                </el-col>
+            </el-row>
+
+            <el-row type="flex" justify="center">
+                <el-col :span="6">
+                    <p>朝向：{{ house.orientation }}</p>
+                    </div>
+                </el-col>
+                <el-col :span="6">
+                    <p>用途：{{ house.purpose }}</p>
+                    </div>
+                </el-col>
+                <el-col :span="6">
+                    <p>发布：{{ house.year }}</p>
+                    </div>
+                </el-col>
+            </el-row>
+
+            <el-row>
+                <el-col :span="12">应付金额</el-col>
+                <el-col :span="12"><el-input v-bind:placeholder="house.commission"></el-input></el-col>
+            </el-row>
+        </el-form>
+    </el-dialog>
     <!--详情界面-->
     <el-dialog :title="house.title" v-model="houseDetailVisible" :close-on-click-modal="false" >
         <el-form :model="house" label-width="150px">
@@ -299,6 +353,31 @@ export default {
             } else if (feature == 'around') {
                 return '周边配套';
             }
+        },
+
+        payment(row) {
+            this.house.imgs = JSON.parse(row.imgs);
+            this.house.title = row.title;
+            this.house.tags = row.tags.split("|");
+            this.house.price = row.price;
+            this.house.area = row.area;
+            this.house.layout = row.layout;
+            this.house.type = row.type;
+            this.house.status = row.status;
+            this.house.year = row.year;
+            this.house.renovation = row.renovation;
+            this.house.orientation = row.orientation;
+            this.house.floor = row.floor;
+            this.house.purpose = row.purpose;
+            this.house.commission = row.commission;
+            if (row.feature.length > 0) {
+                this.house.feature = JSON.parse(row.feature);
+            }
+            this.house.city = row.city;
+            this.house.community = row.community;
+            this.house.agent = row.agent;
+            this.location = [row.community.longitude, row.community.latitude];
+            this.paymentVisible = true;
         },
 
         //显示编辑界面
