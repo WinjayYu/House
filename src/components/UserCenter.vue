@@ -1,9 +1,22 @@
 <template>
     <el-form ref="form" :model="form">
         <h2 style="margin-top:0">基本资料</h2>
-        <el-form-item label="头像url">
-            <el-input v-model="form.head" style="width:70%"></el-input>
-        </el-form-item>
+        <div class="form-group imgUploadBox">
+            <label for="image">上传图片</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <form action="" class="imgUploadForm" method="post" enctype="multipart/form-data">
+                        <input id="image" type="file" v-on:click="imageUpload">
+                    </form>
+                    <div>
+                        <img  :src="form.img"  style="width: 40%; margin-left: 80px; border-radius:50%" />
+                    </div>
+                </div>
+            </div>
+            <!--<el-form-item label="头像url">-->
+                <!--<el-input v-model="form.head" style="width:70%"></el-input>-->
+            <!--</el-form-item>-->
+        </div>
         <el-form-item label="性别">
             <el-radio class="radio" v-model="form.sex" label="10">男</el-radio>
             <el-radio class="radio" v-model="form.sex" label="20">女</el-radio>
@@ -31,12 +44,18 @@
                     id: '',
                     head: '',
                     username: '',
-                    sex: ''
+                    sex: '',
+                    img:''
                 }
             };
         },
 
         methods: {
+
+            imageUpload: function (e) {
+                console.log(e.target.files[0]);
+            },
+
             onSubmit: function () {
                 Api.update(this.form).then(response => {
                     this.logining = false;
@@ -70,6 +89,7 @@
                 this.form.username = user.username;
                 this.form.head = user.head;
                 this.form.sex = user.sex;
+                this.form.img = user.head;
             }
         }
     }
@@ -85,4 +105,5 @@
         border-radius: 5px;
         margin: 120px auto;
     }
+
 </style>

@@ -26,6 +26,7 @@ import echarts from './components/charts/echarts.vue'
 import OrderList from './components/OrderManager/OrderList.vue'
 import PublishHouse from './components/HouseManager/PublishHouse.vue'
 import RegisterAgent from './components/RegisterAgent.vue'
+import test from './components/test.vue'
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
@@ -115,7 +116,12 @@ const routes = [
         children: [
             {path: '/PublishHouse', component: PublishHouse, name: '发布房源'}
         ]
-    }
+    },
+    {
+        path: '/test',
+        component: test,
+        hidden: true//不显示在导航中
+    },
 ]
 
 const router = new VueRouter({

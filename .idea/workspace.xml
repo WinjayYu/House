@@ -2,9 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="320e9e53-aac6-4a97-a0f6-177d1629c5cc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/nuget/NuGet.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/.jscs.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker-standalone.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/ChangeLog.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/ContributorsGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/Events.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/Extras.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/Functions.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/Installing.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/Options.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/Version 4 Changelog.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/Version 4 Contributors guide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/docs/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/mkdocs.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/less/_bootstrap-datetimepicker.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/less/bootstrap-datetimepicker-build.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/nuget/Bootstrap.v3.Datetimepicker.CSS.nuspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/nuget/Bootstrap.v3.Datetimepicker.nuspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/nuget/install.ps1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/sass/_bootstrap-datetimepicker.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker-build.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/tasks/bump_version.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/publicApiSpec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/compile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/out/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/pic/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/t1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/t2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/t3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/t4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap-datetimepicker/test/screen-capture/t5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/affix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/scrollspy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/js/transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap.slim.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_badges.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_breadcrumbs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_button-groups.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_carousel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_close.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_code.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_component-animations.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_dropdowns.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_glyphicons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_input-groups.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_jumbotron.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_labels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_list-group.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_media.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_modals.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_navbar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_navs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_normalize.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_pager.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_pagination.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_panels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_popovers.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_print.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_progress-bars.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_responsive-embed.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_responsive-utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_scaffolding.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_tables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_theme.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_thumbnails.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_tooltip.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_type.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/_wells.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_background-variant.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_border-radius.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_center-block.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_clearfix.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_gradients.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_grid-framework.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_hide-text.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_image.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_labels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_list-group.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_nav-divider.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_nav-vertical-align.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_opacity.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_pagination.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_panels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_progress-bar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_reset-filter.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_reset-text.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_resize.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_responsive-visibility.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_size.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_tab-focus.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_table-row.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_text-emphasis.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_text-overflow.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin/bootstrap/scss/bootstrap/mixins/_vendor-prefixes.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/api.js" afterPath="$PROJECT_DIR$/src/api/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HouseManager/House.vue" afterPath="$PROJECT_DIR$/src/components/HouseManager/House.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/webpack.base.conf.js" afterPath="$PROJECT_DIR$/build/webpack.base.conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/UserCenter.vue" afterPath="$PROJECT_DIR$/src/components/UserCenter.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
     </list>
     <ignored path="House.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,92 +162,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Login.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Login.vue">
+      <file leaf-file-name="test.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/test.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="133">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PublishHouse.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/HouseManager/PublishHouse.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-190">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#3;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#4;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#5;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#7;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#8;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#10;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#11;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#12;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#13;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#14;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#15;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#el-form-item#16;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#3127#3148#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Main.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserCenter.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserCenter.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/UserCenter.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="78" selection-start-line="7" selection-start-column="12" selection-end-line="8" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Register.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Register.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterAgent.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/RegisterAgent.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-817">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="208">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
-                <element signature="e#14#35#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#el-form#0;n#template#0;n#!!top" expanded="true" />
+                <marker date="1488725883794" expanded="false" signature="787:796" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-418">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,8 +198,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="55" column="32" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="32" />
+            <state relative-caret-position="193">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding>
                 <element signature="e#382#410#0" expanded="true" />
               </folding>
@@ -129,11 +207,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="House.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="House.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/HouseManager/House.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4960">
-              <caret line="147" column="63" selection-start-line="147" selection-start-column="63" selection-end-line="147" selection-end-column="63" />
+            <state relative-caret-position="57">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.base.conf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/webpack.base.conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="30" column="99" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/UserManager/User.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="93" column="38" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -142,11 +250,21 @@
       <file leaf-file-name="Home.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2679">
-              <caret line="141" column="47" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="47" />
+            <state relative-caret-position="105">
+              <caret line="188" column="34" selection-start-line="188" selection-start-column="21" selection-end-line="188" selection-end-column="34" />
               <folding>
-                <element signature="n#style#0;n#i#0;n#h5#0;n#el-col#0;n#el-row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#el-dropdown#0;n#el-col#0;n#el-row#0;n#template#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/plugin/bootstrap/js/tab.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,8 +274,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="vue file" />
         <option value="JavaScript File" />
+        <option value="vue file" />
       </list>
     </option>
   </component>
@@ -179,16 +297,18 @@
         <option value="$PROJECT_DIR$/src/components/OrderManager/OrderList.vue" />
         <option value="$PROJECT_DIR$/src/components/Login.vue" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/build/webpack.base.conf.js" />
-        <option value="$PROJECT_DIR$/src/components/UserCenter.vue" />
         <option value="$PROJECT_DIR$/src/components/HouseManager/PublishHouse.vue" />
         <option value="$PROJECT_DIR$/src/components/Home.vue" />
         <option value="$PROJECT_DIR$/src/components/RegisterAgant.vue" />
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/Register.vue" />
         <option value="$PROJECT_DIR$/src/components/RegisterAgent.vue" />
         <option value="$PROJECT_DIR$/src/api/api.js" />
         <option value="$PROJECT_DIR$/src/components/HouseManager/House.vue" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/components/test.vue" />
+        <option value="$PROJECT_DIR$/build/webpack.base.conf.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/components/UserCenter.vue" />
       </list>
     </option>
   </component>
@@ -233,6 +353,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,7 +422,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="OrderManager" />
+              <option name="myItemId" value="UserManager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,40 +436,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HouseManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="House" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="House" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,13 +457,14 @@
     <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WebstormProjects\House\src\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\House\src\plugin" />
       <recent name="D:\WebstormProjects\House\src\components" />
       <recent name="D:\WebstormProjects\House\src\components\HouseManager" />
       <recent name="D:\WebstormProjects\House\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\House\src\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -466,6 +561,7 @@
       <workItem from="1488284414882" duration="6058000" />
       <workItem from="1488375109341" duration="2608000" />
       <workItem from="1488461055952" duration="2370000" />
+      <workItem from="1488709689093" duration="6330000" />
     </task>
     <task id="LOCAL-00001" summary="提交代码">
       <created>1485944218084</created>
@@ -534,10 +630,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165101000" />
+    <option name="totallyTimeSpent" value="171431000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="0" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20223881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -613,27 +709,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/element-ui/lib/element-ui.common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="434" column="9" selection-start-line="434" selection-start-column="9" selection-end-line="434" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UserManager/Agent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2090">
-          <caret line="116" column="26" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -770,13 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UserManager/User.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="93" column="38" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HouseManager/UnCheckHouse.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6745">
@@ -826,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.base.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="75" column="3" selection-start-line="75" selection-start-column="3" selection-end-line="75" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -866,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1824">
           <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,14 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -889,15 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UserCenter.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="78" selection-start-line="7" selection-start-column="12" selection-end-line="8" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -906,26 +949,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="55" column="32" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="32" />
-          <folding>
-            <element signature="e#382#410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2679">
-          <caret line="141" column="47" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#h5#0;n#el-col#0;n#el-row#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -945,55 +968,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/RegisterAgent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-817">
+        <state relative-caret-position="152">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding>
-            <element signature="e#14#35#0" expanded="true" />
+            <element signature="e#14#35#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HouseManager/PublishHouse.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
+        <state relative-caret-position="722">
           <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#3;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#4;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#5;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#7;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#8;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#10;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#11;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#12;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#13;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#14;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#15;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#el-form-item#16;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#3127#3148#0" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#3;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#4;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#5;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#7;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#8;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#10;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#11;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#12;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#13;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#14;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#15;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#16;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#3127#3148#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegisterAgent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HouseManager/House.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4960">
-          <caret line="147" column="63" selection-start-line="147" selection-start-column="63" selection-end-line="147" selection-end-column="63" />
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugin/bootstrap/js/tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UserManager/User.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="93" column="38" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.base.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="99" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <element signature="e#382#410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="188" column="34" selection-start-line="188" selection-start-column="21" selection-end-line="188" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#el-dropdown#0;n#el-col#0;n#el-row#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/test.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UserCenter.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#el-form#0;n#template#0;n#!!top" expanded="true" />
+            <marker date="1488725883794" expanded="false" signature="787:796" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
