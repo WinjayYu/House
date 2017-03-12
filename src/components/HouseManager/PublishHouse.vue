@@ -144,17 +144,17 @@
                 });
             }
         },
-        created() {
-            var user = sessionStorage.getItem('user');
-            if (user) {
-                user = JSON.parse(user);
-                console.log(user.username +"-llll");
-                this.form.id = user.id;
-                this.form.username = user.username;
-                this.form.head = user.head;
-                this.form.sex = user.sex;
-            }
-        }
+//        created() {
+//            var user = sessionStorage.getItem('user');
+//            if (user) {
+//                user = JSON.parse(user);
+//                console.log(user.username +"-llll");
+//                this.form.id = user.id;
+//                this.form.username = user.username;
+//                this.form.head = user.head;
+//                this.form.sex = user.sex;
+//            }
+//        }
     }
 </script>
 

@@ -21,8 +21,8 @@
     data() {
       return {
         ruleForm2: {
-          account: '15337203831',
-          checkPass: '123456'
+          account: '',
+          checkPass: ''
         },
         rules2: {
           account: [

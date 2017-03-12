@@ -1,5 +1,5 @@
 <template>
-    <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm card-box loginform">
+    <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" class="demo-ruleForm card-box loginform">
         <div align="center">
             <img src="../assets/logo.png" class="title"/>
         </div>
@@ -15,11 +15,12 @@
         </el-form-item>
 
         </el-form-item>
-        <el-form-item label="身份证正面" class="idcard">
+        <el-form-item label="身份证正面">
             <el-input v-model="ruleForm2.img1"></el-input>
         </el-form-item>
-        <el-form-item label="身份证反面" class="idcard">
-            <el-input v-model="ruleForm2.img2"></el-input>
+        <el-form-item label="身份证反面">
+            <el-input v-model="ruleForm2.img2" ></el-input>
+            </el-form-item>
 
         <el-form-item >
             <el-button type="primary"  @click.native.prevent="handleSubmit2" :loading="register" class="reg">注册</el-button>

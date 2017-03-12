@@ -54,6 +54,32 @@
 
             imageUpload: function (e) {
                 console.log(e.target.files[0]);
+                if(e.target.files[0]) {
+                    var formData = new FormData();
+                    formData.append("userId", this.form.id);
+                    formData.append("image", e.target.files[0]);
+                    let params = {
+                        userId: this.form.id,
+                        image: e.target.files[0]
+                    }
+                    Api.head(formData).then(response => {
+                        let _this = this;
+                        if (response.data.status !== 0) {
+                            this.$notify({
+                                title: '错误',
+                                message: "更新失败！",
+                                type: 'error'
+                            });
+                        } else {
+                            this.$notify({
+                                        title: "success!"
+                                    }
+                            )
+                        }
+                    }).catch((e) => {
+
+                    });
+                }
             },
 
             onSubmit: function () {

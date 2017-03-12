@@ -87,5 +87,9 @@ export default {
     RegisterAgent:(params) => {
         Vue.http.options.emulateJSON = true;
         return Vue.resource(baseUrl + '/api/agent/register').save({}, params)
+    },
+    head: (params) => {
+        //Vue.http.options.emulateJSON = true;
+        return Vue.resource(baseUrl +　'/api/user/head').save({}, params)
     }
 }
