@@ -3,21 +3,28 @@
         <el-form-item label="标题">
             <el-input v-model="publishHouse.title" style="width:70%"></el-input>
         </el-form-item>
-        <el-form-item label="图片1">
-            <el-input v-model="img.img1" style="width:70%"></el-input>
+
+
+        <el-form-item>
+            <span style="color: #5e6d82">房屋图片</span>
+            <span class="btn btn-default btn-file" >
+                图片1<input id="img1" type="file" v-on:change="upload('img1', $event)"/>
+            </span>
+            <span class="btn btn-default btn-file">
+                &nbsp;图片2<input id="img2" type="file" v-on:change="upload('img2', $event)"/>
+            </span>
+            <span class="btn btn-default btn-file">
+                &nbsp;图片3<input id="img3" type="file" v-on:change="upload('img3', $event)"/>
+            </span>
+            <span class="btn btn-default btn-file">
+                 &nbsp;图片4<input id="img4" type="file" v-on:change="upload('img4', $event)"/>
+            </span>
+            <span class="btn btn-default btn-file">
+               &nbsp;图片5<input id="img5" type="file" v-on:change="upload('img5', $event)"/>
+            </span>
         </el-form-item>
-        <el-form-item label="图片2">
-            <el-input v-model="img.img2" style="width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="图片3">
-            <el-input v-model="img.img3" style="width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="图片4">
-            <el-input v-model="img.img4" style="width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="图片5">
-            <el-input v-model="img.img5" style="width:70%"></el-input>
-        </el-form-item>
+
+
         <el-form-item label="标签">
             <el-input v-model="publishHouse.tags" placeholder="多个标签用'|'分隔,如:地铁房|学区房" style="width:70%"></el-input>
         </el-form-item>
@@ -50,10 +57,19 @@
             <el-input v-model="publishHouse.feature" style="margin-left:15px; width:70%"></el-input>
         </el-form-item>
         <el-form-item label="城市">
-            <el-input v-model="publishHouse.city" style="margin-left:15px; width:70%"></el-input>
+            <el-input v-model="publishHouse.city" placeholder="目前支持武汉地区" style="margin-left:15px; width:70%"></el-input>
         </el-form-item>
+        <!--<el-form-item label="小区">-->
+            <!--<el-input v-model="publishHouse.community.title" style="margin-left:15px; width:70%"></el-input>-->
+        <!--</el-form-item>-->
         <el-form-item label="小区">
-            <el-input v-model="publishHouse.community.title" style="margin-left:15px; width:70%"></el-input>
+            <el-select v-model="value" placeholder="请选择">
+                <el-option
+                        v-for="item in options"
+                        :label="item.label"
+                        :value="item.value">
+                </el-option>
+            </el-select>
         </el-form-item>
 
             <el-button type="primary" @click="onSubmit">立即发布</el-button>
@@ -72,6 +88,26 @@
     export default {
         data() {
             return {
+                options: [{
+                    value: 'B001B0JIFI',
+                    label: '玉龙岛花园'
+                }, {
+                    value: 'B001B0JIGT',
+                    label: '加州·香山美树'
+                }, {
+                    value: 'B001B16UVE',
+                    label: '联投龙湾2期'
+                }, {
+                    value: 'B001B171HI',
+                    label: '名城8090'
+                }, {
+                    value: 'B0FFFFNMMR',
+                    label: '保利时代'
+                }, {
+                    value: 'B001B0K7DH',
+                    label: '保利花园'
+                }],
+                value: '',
                 img:{
                   img1:'',
                   img2:'',
@@ -171,5 +207,26 @@
     .publish {
         top: 0;
         margin-top: 0;
+    }
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+        color: #73ccff;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: #73ccff;
+        cursor: inherit;
+        display: block;
+
     }
 </style>

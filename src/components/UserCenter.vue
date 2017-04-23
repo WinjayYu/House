@@ -2,17 +2,21 @@
     <el-form ref="form" :model="form">
         <h2 style="margin-top:0">基本资料</h2>
         <div class="form-group imgUploadBox">
-            <label for="image">上传图片</label>
+
+
             <div class="input-group">
                 <div class="input-group-addon">
                     <form action="" class="imgUploadForm" method="post" enctype="multipart/form-data">
-                        <input id="image" type="file" v-on:click="imageUpload">
+                        <span class="btn btn-default btn-file" >
+                             <input id="image" type="file" v-on:click="imageUpload">
+                        </span>
                     </form>
                     <div>
                         <img  :src="form.img"  style="width: 40%; margin-left: 80px; border-radius:50%" />
                     </div>
                 </div>
             </div>
+            <label for="image" style="margin-left: 30%">更改图像</label>
             <!--<el-form-item label="头像url">-->
                 <!--<el-input v-model="form.head" style="width:70%"></el-input>-->
             <!--</el-form-item>-->
@@ -130,6 +134,27 @@
         box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.3), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
         border-radius: 5px;
         margin: 120px auto;
+    }
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+        color: #73ccff;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: #73ccff;
+        cursor: inherit;
+        display: block;
+
     }
 
 </style>

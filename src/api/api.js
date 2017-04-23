@@ -5,7 +5,7 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-export const baseUrl = 'http://ylili.cn/zaja';
+export const baseUrl = 'http://ylili.cn:8080/zaja';
 //const baseUrl = 'http://localhost:8080/zaja'
 
 export default {
@@ -85,7 +85,7 @@ export default {
 
     },
     RegisterAgent:(params) => {
-        Vue.http.options.emulateJSON = true;
+        //Vue.http.options.emulateJSON = true;
         return Vue.resource(baseUrl + '/api/agent/register').save({}, params)
     },
     head: (params) => {

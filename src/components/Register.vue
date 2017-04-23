@@ -18,6 +18,7 @@
             <el-button type="primary"  @click.native.prevent="handleSubmit2" :loading="register" class="reg">注册</el-button>
             <el-button @click.native.prevent="handleReset2" class="reset">重置</el-button>
         </el-form-item>
+        <el-button type="primary" size="mini" @click="backHome">回到首页</el-button>
         <el-button type="primary" size="mini" @click="registerAgent">注册成为经纪人</el-button>
     </el-form>
 </template>
@@ -50,6 +51,9 @@
             };
         },
         methods: {
+            backHome() {
+                this.$router.replace('/House');
+            },
             registerAgent() {
                 this.$router.replace('/registerAgent');
             },
