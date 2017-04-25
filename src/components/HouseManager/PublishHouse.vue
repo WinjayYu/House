@@ -1,83 +1,92 @@
 <template>
-    <el-form ref="publishHouse" :model="publishHouse" :rules="img" class="publish">
-        <el-form-item label="标题">
-            <el-input v-model="publishHouse.title" style="width:70%"></el-input>
-        </el-form-item>
+    <el-tabs>
+        <el-form :model="publishHouse" :rules="rules2" ref="house" class="publish" enctype="multipart/form-data">
+            <el-form-item label="标题">
+                <el-input v-model="publishHouse.title" style="width:70%"></el-input>
+            </el-form-item>
 
 
-        <el-form-item>
-            <span style="color: #5e6d82">房屋图片</span>
-            <span class="btn btn-default btn-file" >
-                图片1<input id="img1" type="file" v-on:change="upload('img1', $event)"/>
-            </span>
-            <span class="btn btn-default btn-file">
-                &nbsp;图片2<input id="img2" type="file" v-on:change="upload('img2', $event)"/>
-            </span>
-            <span class="btn btn-default btn-file">
-                &nbsp;图片3<input id="img3" type="file" v-on:change="upload('img3', $event)"/>
-            </span>
-            <span class="btn btn-default btn-file">
-                 &nbsp;图片4<input id="img4" type="file" v-on:change="upload('img4', $event)"/>
-            </span>
-            <span class="btn btn-default btn-file">
-               &nbsp;图片5<input id="img5" type="file" v-on:change="upload('img5', $event)"/>
-            </span>
-        </el-form-item>
+                 <el-form-item>
+                        <span style="color: #5e6d82">房屋图片</span>
+                        <div  v-bind:class="{active:publishHouse.imgs[0]}">
+                            <label class="lab" for="img1">图片1</label><input id="img1" type="file" @change="upload(1,$event)"/>
+                            <img class="showimg" id="showimg1" src="">
+                        </div>
+                        <div  v-bind:class="{active:publishHouse.imgs[1]}">
+                            <label class="lab" for="img2">图片2</label><input id="img2" type="file" @change="upload(2,$event)"/>
+                            <img class="showimg" id="showimg2" src="">
+                        </div>
+                        <div  v-bind:class="{active:publishHouse.imgs[2]}">
+                            <label class="lab" for="img3">图片3</label><input id="img3" type="file" @change="upload(3,$event)"/>
+                            <img class="showimg" id="showimg3" src="">
+                        </div>
+                        <div v-bind:class="{active:publishHouse.imgs[3]}">
+                            <label class="lab" for="img4">图片2</label><input id="img4" type="file" @change="upload(4,$event)"/>
+                            <img class="showimg" id="showimg4" src="">
+                        </div>
+                        <div  v-bind:class="{active:publishHouse.imgs[4]}">
+                            <label class="lab" for="img5">图片2</label><input id="img5" type="file" @change="upload(5,$event)"/>
+                            <img class="showimg" id="showimg5" src="">
+                        </div>
+                 </el-form-item>
 
 
-        <el-form-item label="标签">
-            <el-input v-model="publishHouse.tags" placeholder="多个标签用'|'分隔,如:地铁房|学区房" style="width:70%"></el-input>
-        </el-form-item>
+            <el-form-item label="标签">
+                <el-input v-model="publishHouse.tags" placeholder="多个标签用'|'分隔,如:地铁房|学区房" style="width:70%"></el-input>
+            </el-form-item>
 
-        <el-form-item label="价格">
-            <el-input v-model="publishHouse.price" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="面积">
-            <el-input v-model="publishHouse.area" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="样式">
-            <el-radio class="radio" v-model="publishHouse.layout" label="1室1厅1卫">1室1厅1卫</el-radio>
-            <el-radio class="radio" v-model="publishHouse.layout" label="2室1厅1卫">2室1厅1卫</el-radio>
-            <el-radio class="radio" v-model="publishHouse.layout" label="3室1厅1卫">3室1厅1卫</el-radio>
-            <el-radio class="radio" v-model="publishHouse.layout" label="2室1厅2卫">2室1厅2卫</el-radio>
-        </el-form-item>
-        <el-form-item label="年限">
-            <el-input v-model="publishHouse.year" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="装修程度">
-            <el-input v-model="publishHouse.renovation" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="朝向">
-            <el-input v-model="publishHouse.orientation" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="楼层">
-            <el-input v-model="publishHouse.floor" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="特色">
-            <el-input v-model="publishHouse.feature" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <el-form-item label="城市">
-            <el-input v-model="publishHouse.city" placeholder="目前支持武汉地区" style="margin-left:15px; width:70%"></el-input>
-        </el-form-item>
-        <!--<el-form-item label="小区">-->
+            <el-form-item label="价格">
+                <el-input v-model="publishHouse.price" style="margin-left:15px; width:70%"></el-input>
+            </el-form-item>
+            <el-form-item label="面积">
+                <el-input v-model="publishHouse.area" style="margin-left:15px; width:70%"></el-input>
+            </el-form-item>
+            <el-form-item label="样式">
+                <el-radio class="radio" v-model="publishHouse.layout" label="1室1厅1卫">1室1厅1卫</el-radio>
+                <el-radio class="radio" v-model="publishHouse.layout" label="2室1厅1卫">2室1厅1卫</el-radio>
+                <el-radio class="radio" v-model="publishHouse.layout" label="3室1厅1卫">3室1厅1卫</el-radio>
+                <el-radio class="radio" v-model="publishHouse.layout" label="2室1厅2卫">2室1厅2卫</el-radio>
+            </el-form-item>
+            <el-row>
+                <el-form-item label="年限">
+                    <el-input v-model="publishHouse.year" style="margin-left:15px; width:70%"></el-input>
+                </el-form-item>
+            </el-row>
+            <el-form-item label="装修程度">
+                <el-input v-model="publishHouse.renovation" style="margin-left:15px; width:70%"></el-input>
+            </el-form-item>
+            <el-form-item label="朝向">
+                <el-input v-model="publishHouse.orientation" style="margin-left:15px; width:70%"></el-input>
+            </el-form-item>
+            <el-form-item label="楼层">
+                <el-input v-model="publishHouse.floor" style="margin-left:15px; width:70%"></el-input>
+            </el-form-item>
+            <el-form-item label="特色">
+                <el-input v-model="publishHouse.feature" style="margin-left:15px; width:70%"></el-input>
+            </el-form-item>
+            <el-form-item label="城市">
+                <el-input v-model="publishHouse.city" placeholder="目前支持武汉地区"
+                          style="margin-left:15px; width:70%"></el-input>
+            </el-form-item>
+            <!--<el-form-item label="小区">-->
             <!--<el-input v-model="publishHouse.community.title" style="margin-left:15px; width:70%"></el-input>-->
-        <!--</el-form-item>-->
-        <el-form-item label="小区">
-            <el-select v-model="value" placeholder="请选择">
-                <el-option
-                        v-for="item in options"
-                        :label="item.label"
-                        :value="item.value">
-                </el-option>
-            </el-select>
-        </el-form-item>
+            <!--</el-form-item>-->
+            <el-form-item label="小区">
+                <el-select v-model="value" placeholder="请选择">
+                    <el-option
+                            v-for="item in options"
+                            :label="item.label"
+                            :value="item.value">
+                    </el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" @click="onSubmit">立即发布</el-button>
+                <el-button>取消</el-button>
+            </el-form-item>
 
-            <el-button type="primary" @click="onSubmit">立即发布</el-button>
-            <el-button>取消</el-button>
-        </el-form-item>
-
-    </el-form>
-
+        </el-form>
+    </el-tabs>
 </template>
 
 
@@ -85,101 +94,84 @@
     import Vue from 'vue'
     import {baseUrl} from '../../api/api'
     import Api from '../../api/api'
+    import {mapGetters, mapActions} from 'vuex'
     export default {
         data() {
             return {
-                options: [{
-                    value: 'B001B0JIFI',
-                    label: '玉龙岛花园'
-                }, {
-                    value: 'B001B0JIGT',
-                    label: '加州·香山美树'
-                }, {
-                    value: 'B001B16UVE',
-                    label: '联投龙湾2期'
-                }, {
-                    value: 'B001B171HI',
-                    label: '名城8090'
-                }, {
-                    value: 'B0FFFFNMMR',
-                    label: '保利时代'
-                }, {
-                    value: 'B001B0K7DH',
-                    label: '保利花园'
-                }],
-                value: '',
-                img:{
-                  img1:'',
-                  img2:'',
-                  img3:'',
-                  img4:'',
-                  img5:'',
-                },
-                publishHouse: {
-                    title: '',
-                    imgs: [],
-                    tags: [],
-                    price: 0,
-                    area: 0,
-                    layout: '',
-                    type: '',
-                    status: '',
-                    year: '',
-                    renovation: '',
-                    orientation: '',
-                    floor: '',
-                    purpose: '',
-                    commission: 0,
-                    feature: '',
-                    city: '',
-                    community: {},
-                    agent: {}
-                },
-                rules2: {
-                    img1: [
-                        { required: true, message: '请输入账号', trigger: 'blur' },
-                    ],
-                    img2: [
-                        { required: true, message: '请输入密码', trigger: 'blur' },
-                    ],
-                    img3: [
-                        { required: true, message: '请输入密码', trigger: 'blur' },
-                    ],
-                    img4: [
-                        { required: true, message: '请输入密码', trigger: 'blur' },
-                    ],
-                    img5: [
-                        { required: true, message: '请输入密码', trigger: 'blur' },
-                    ],
-                },
-            };
-        },
-
-        methods: {
-            onSubmit: function () {
-                let arrImg = new Array(this.img.img1, this.img.img2, this.img.img3, this.img.img4, this.img.img5);
-                this.publishHouse.imgs = arrImg;
-                Api.publishHouse(this.publishHouse).then(response => {
-                    let _this = this;
-                    if (response.data.status !== 0) {
-                        this.$notify({
-                            title: '错误',
-                            message: "发布失败！",
-                            type: 'error'
-                        });
-                    } else {
-                        _this.$router.replace('/House');
-                    }
-
-                }).catch((e) => {
-                    this.$notify({
-                        title: '错误',
-                        message: "出错了！",
-                        type: 'error'
-                    });
-                });
+                newImg: ''
             }
         },
+        computed: {
+            ...mapGetters({
+                options: 'options',
+                publishHouse: 'publishHouse',
+                rules2: 'rules2'
+            }),
+        },
+        methods: {
+            // 根据输入数据的类型存储用户输入信息
+            recordUserData (name, value) {
+                this.$store.commit('recordUserData', {
+                    name: name,
+                    value: value
+                })
+            },
+            upload(num, e) {
+
+                var previewer = document.getElementById("showimg" + num);
+                var reader = new FileReader();
+                reader.onload = function(evt) {
+                    var result = this.result;
+
+                    previewer.src = evt.target.result;
+                };
+                reader.readAsDataURL(e.target.files[0])
+
+                this.$store.commit('setImgs', {
+                    value:e.target.files[0]
+                });
+
+            },
+            onSubmit (formName) {
+                // 检查表单合法性
+                this.$refs["house"].validate((valid) => {
+                    if (valid) {
+                        // 提交注册表单
+                            this.$store.dispatch('submitHouse');
+                    } else {
+                        Notification({
+                            title: '出错了',
+                            message: '请先完善表单！',
+                            type: 'error'
+                        })
+                        return false
+                    }
+                })
+            },
+//            onSubmit: function () {
+//                let arrImg = new Array(this.img.img1, this.img.img2, this.img.img3, this.img.img4, this.img.img5);
+//                this.publishHouse.imgs = arrImg;
+//                Api.publishHouse(this.publishHouse).then(response => {
+//                    let _this = this;
+//                    if (response.data.status !== 0) {
+//                        this.$notify({
+//                            title: '错误',
+//                            message: "发布失败！",
+//                            type: 'error'
+//                        });
+//                    } else {
+//                        _this.$router.replace('/House');
+//                    }
+//
+//                }).catch((e) => {
+//                    this.$notify({
+//                        title: '错误',
+//                        message: "出错了！",
+//                        type: 'error'
+//                    });
+//                });
+//            }
+//        },
 //        created() {
 //            var user = sessionStorage.getItem('user');
 //            if (user) {
@@ -191,6 +183,7 @@
 //                this.form.sex = user.sex;
 //            }
 //        }
+        }
     }
 </script>
 
@@ -204,15 +197,18 @@
         border-radius: 5px;
         margin: 120px auto;
     }
+
     .publish {
         top: 0;
         margin-top: 0;
     }
+
     .btn-file {
         position: relative;
         overflow: hidden;
         color: #73ccff;
     }
+
     .btn-file input[type=file] {
         position: absolute;
         top: 0;
@@ -228,5 +224,19 @@
         cursor: inherit;
         display: block;
 
+    }
+
+    .active{
+        color:red;
+    }
+
+    .lab{
+        margin-left: 50px;
+    }
+
+    .showimg {
+        width: 300px;
+        margin-left: 90px;
+        display: block;
     }
 </style>

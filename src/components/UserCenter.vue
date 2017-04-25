@@ -28,7 +28,7 @@
         <el-form-item label="昵称">
             <el-input v-model="form.username" style="margin-left:15px; width:70%"></el-input>
         </el-form-item>
-
+        <el-form-item>
             <el-button type="primary" @click="onSubmit">立即修改</el-button>
             <el-button>取消</el-button>
         </el-form-item>

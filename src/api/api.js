@@ -5,8 +5,8 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-export const baseUrl = 'http://ylili.cn:8080/zaja';
-//const baseUrl = 'http://localhost:8080/zaja'
+//export const baseUrl = 'http://ylili.cn:8080/zaja';
+export const baseUrl = 'http://localhost:8080/zaja'
 
 export default {
 
@@ -80,7 +80,7 @@ export default {
 
     },
     publishHouse: (params) => {
-        Vue.http.options.emulateJSON = true;
+         Vue.http.options.emulateJSON = true;
         return Vue.resource(baseUrl + '/api/agent/publishhouse').save({}, params)
 
     },

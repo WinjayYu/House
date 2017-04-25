@@ -7,6 +7,7 @@ import Agent from './modules/Agent'
 import User from './modules/User'
 import House from './modules/House'
 import Order from './modules/Order'
+import PublishHouse from './modules/PublishHouse'
 
 
 Vue.use(Vuex)
@@ -19,7 +20,8 @@ export default new Vuex.Store({
       Agent,
       User,
       House,
-      Order
+      Order,
+      PublishHouse
     },
     actions,
     getters
