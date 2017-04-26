@@ -24,7 +24,6 @@ const state = {
         value: 'B001B0K7DH',
         label: '保利花园'
     }],
-    value: '',
     img:{
         img1:'',
         img2:'',
@@ -36,8 +35,8 @@ const state = {
         title: '',
         imgs: [],
         tags: [],
-        price: 0,
-        area: 0,
+        price: '',
+        area: '',
         layout: '',
         type: '',
         status: '',
@@ -46,29 +45,12 @@ const state = {
         orientation: '',
         floor: '',
         purpose: '',
-        commission: 0,
+        commission: '',
         feature: '',
         city: '',
-        community: {},
-        agent: {}
-    },
-    rules2: {
-        img1: [
-            { required: true, message: '请输入账号', trigger: 'blur' },
-        ],
-        img2: [
-            { required: true, message: '请输入密码', trigger: 'blur' },
-        ],
-        img3: [
-            { required: true, message: '请输入密码', trigger: 'blur' },
-        ],
-        img4: [
-            { required: true, message: '请输入密码', trigger: 'blur' },
-        ],
-        img5: [
-            { required: true, message: '请输入密码', trigger: 'blur' },
-        ],
-    },
+        uid: '',
+        agent: ''
+    }
 };
 
 const getters = {
@@ -79,74 +61,48 @@ const getters = {
 
 const mutations = {
     recordUserData: (state, mess) => {
-        switch (mess.inputname) {
-            case 'title':
-                state.publishHouse.title = mess.data;
-                break;
-            case 'imgs':
-                state.publishHouse.imgs.push(mess.data);
-                break;
-            case 'tags':
-                state.publishHouse.tags = mess.data;
-                break;
-            case 'price':
-                state.publishHouse.price = mess.data;
-                break;
-            case 'area':
-                state.publishHouse.area = mess.data;
-                break;
-            case 'layout':
-                state.publishHouse.layout = mess.data;
-                break;
-            case 'type':
-                state.publishHouse.type = mess.data;
-                break;
-            case 'status':
-                state.publishHouse.status = mess.data;
-                break;
-            case 'year':
-                state.publishHouse.year = mess.data;
-                break;
-            case 'renovation':
-                state.publishHouse.renovation = mess.data;
-                break;
-            case 'orientation':
-                state.publishHouse.orientation = mess.data;
-                break;
-            case 'floor':
-                state.publishHouse.floor = mess.data;
-                break;
-            case 'purpose':
-                state.publishHouse.purpose = mess.data;
-                break;
-            case 'commission':
-                state.publishHouse.commission = mess.data;
-                break;
-            case 'feature':
-                state.publishHouse.feature = mess.data;
-                break;
-            case 'city':
-                state.publishHouse.city = mess.data;
-                break;
-            case 'community':
-                state.publishHouse.community = mess.data;
-                break;
-            case 'agent':
-                state.publishHouse.agent = mess.data;
-                break;
-        }
+      switch (mess.name) {
+          case 'uid':
+              state.publishHouse.uid = mess.value;
+      }
+      console.log(state.publishHouse.uid);
     },
     setImgs: (state, mess) => {
         state.publishHouse.imgs.push(mess.value);
-        // console.log(mess);
-         console.log(state.publishHouse.imgs);
     }
 };
 
 const actions =　{
     submitHouse:(context) => {
-        console.log(context.getters.publishHouse);
-        Api.publishHouse(context.getters.publishHouse).then(response => {
+        var formData = new FormData();
+        var imgArr = context.getters.publishHouse.imgs;
+        // for(let i = 0; i < imgArr; i++){
+        //     formData.append("imgs[]", imgArr[i]);
+        // }
+        formData.append("title", context.getters.publishHouse.title);
+        formData.append("img1", context.getters.publishHouse.imgs[0]);
+        formData.append("img2", context.getters.publishHouse.imgs[1]);
+        formData.append("img3", context.getters.publishHouse.imgs[2]);
+        formData.append("img4", context.getters.publishHouse.imgs[3]);
+        formData.append("img5", context.getters.publishHouse.imgs[4]);
+        formData.append("tags", context.getters.publishHouse.tags);
+        formData.append("price", context.getters.publishHouse.price);
+        formData.append("area", context.getters.publishHouse.area);
+        formData.append("layout", context.getters.publishHouse.layout);
+        formData.append("type", context.getters.publishHouse.type);
+        formData.append("status", context.getters.publishHouse.status);
+        formData.append("year", context.getters.publishHouse.year);
+        formData.append("renovation", context.getters.publishHouse.renovation);
+        formData.append("orientation", context.getters.publishHouse.orientation);
+        formData.append("floor", context.getters.publishHouse.floor);
+        formData.append("purpose", context.getters.publishHouse.purpose);
+        formData.append("commission", context.getters.publishHouse.commission);
+        formData.append("feature", context.getters.publishHouse.feature);
+        formData.append("city", context.getters.publishHouse.city);
+        formData.append("uid", context.getters.publishHouse.uid);
+        formData.append("agent", context.getters.publishHouse.agent);
+        console.log(formData);
+        Api.publishHouse(formData).then(response => {
             let _this = this;
             if (response.data.status !== 0) {
                 Message.error({

@@ -80,7 +80,7 @@ export default {
 
     },
     publishHouse: (params) => {
-         Vue.http.options.emulateJSON = true;
+         //Vue.http.options.emulateJSON = true;
         return Vue.resource(baseUrl + '/api/agent/publishhouse').save({}, params)
 
     },

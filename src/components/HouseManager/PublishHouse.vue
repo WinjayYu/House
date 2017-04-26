@@ -1,45 +1,45 @@
 <template>
     <el-tabs>
-        <el-form :model="publishHouse" :rules="rules2" ref="house" class="publish" enctype="multipart/form-data">
+        <el-form :model="publishHouse"  ref="house" class="publish" enctype="multipart/form-data">
             <el-form-item label="标题">
-                <el-input v-model="publishHouse.title" style="width:70%"></el-input>
+                <el-input v-model="publishHouse.title" required></el-input>
             </el-form-item>
 
 
                  <el-form-item>
-                        <span style="color: #5e6d82">房屋图片</span>
+                        <span style="color: #5e6d82">房屋图片</span><span class="tip">至少一张</span>
                         <div  v-bind:class="{active:publishHouse.imgs[0]}">
-                            <label class="lab" for="img1">图片1</label><input id="img1" type="file" @change="upload(1,$event)"/>
-                            <img class="showimg" id="showimg1" src="">
+                            <label class="lab" for="img1">图片1</label><input id="img1" type="file" @change="upload(1,$event)" required="true"/>
+                            <img v-show="publishHouse.imgs[0]" class="showimg" id="showimg1" src="">
                         </div>
                         <div  v-bind:class="{active:publishHouse.imgs[1]}">
                             <label class="lab" for="img2">图片2</label><input id="img2" type="file" @change="upload(2,$event)"/>
-                            <img class="showimg" id="showimg2" src="">
+                            <img v-show="publishHouse.imgs[1]" class="showimg" id="showimg2" src="">
                         </div>
                         <div  v-bind:class="{active:publishHouse.imgs[2]}">
                             <label class="lab" for="img3">图片3</label><input id="img3" type="file" @change="upload(3,$event)"/>
-                            <img class="showimg" id="showimg3" src="">
+                            <img v-show="publishHouse.imgs[2]" class="showimg" id="showimg3" src="">
                         </div>
                         <div v-bind:class="{active:publishHouse.imgs[3]}">
-                            <label class="lab" for="img4">图片2</label><input id="img4" type="file" @change="upload(4,$event)"/>
-                            <img class="showimg" id="showimg4" src="">
+                            <label class="lab" for="img4">图片4</label><input id="img4" type="file" @change="upload(4,$event)"/>
+                            <img v-show="publishHouse.imgs[3]" class="showimg" id="showimg4" src="">
                         </div>
                         <div  v-bind:class="{active:publishHouse.imgs[4]}">
-                            <label class="lab" for="img5">图片2</label><input id="img5" type="file" @change="upload(5,$event)"/>
-                            <img class="showimg" id="showimg5" src="">
+                            <label class="lab" for="img5">图片5</label><input id="img5" type="file" @change="upload(5,$event)"/>
+                            <img v-show="publishHouse.imgs[4]" class="showimg" id="showimg5" src="">
                         </div>
                  </el-form-item>
 
 
             <el-form-item label="标签">
-                <el-input v-model="publishHouse.tags" placeholder="多个标签用'|'分隔,如:地铁房|学区房" style="width:70%"></el-input>
+                <el-input v-model="publishHouse.tags" placeholder="多个标签用'|'分隔,如:地铁房|学区房"></el-input>
             </el-form-item>
 
             <el-form-item label="价格">
-                <el-input v-model="publishHouse.price" style="margin-left:15px; width:70%"></el-input>
+                <el-input v-model="publishHouse.price" ></el-input>
             </el-form-item>
             <el-form-item label="面积">
-                <el-input v-model="publishHouse.area" style="margin-left:15px; width:70%"></el-input>
+                <el-input v-model="publishHouse.area"></el-input>
             </el-form-item>
             <el-form-item label="样式">
                 <el-radio class="radio" v-model="publishHouse.layout" label="1室1厅1卫">1室1厅1卫</el-radio>
@@ -49,30 +49,29 @@
             </el-form-item>
             <el-row>
                 <el-form-item label="年限">
-                    <el-input v-model="publishHouse.year" style="margin-left:15px; width:70%"></el-input>
+                    <el-input v-model="publishHouse.year" ></el-input>
                 </el-form-item>
             </el-row>
             <el-form-item label="装修程度">
-                <el-input v-model="publishHouse.renovation" style="margin-left:15px; width:70%"></el-input>
+                <el-input v-model="publishHouse.renovation" style="width: 370px"></el-input>
             </el-form-item>
             <el-form-item label="朝向">
-                <el-input v-model="publishHouse.orientation" style="margin-left:15px; width:70%"></el-input>
+                <el-input v-model="publishHouse.orientation" ></el-input>
             </el-form-item>
             <el-form-item label="楼层">
-                <el-input v-model="publishHouse.floor" style="margin-left:15px; width:70%"></el-input>
+                <el-input v-model="publishHouse.floor" ></el-input>
             </el-form-item>
             <el-form-item label="特色">
-                <el-input v-model="publishHouse.feature" style="margin-left:15px; width:70%"></el-input>
+                <el-input v-model="publishHouse.feature" ></el-input>
             </el-form-item>
             <el-form-item label="城市">
-                <el-input v-model="publishHouse.city" placeholder="目前支持武汉地区"
-                          style="margin-left:15px; width:70%"></el-input>
+                <el-input v-model="publishHouse.city" placeholder="目前支持武汉地区"></el-input>
             </el-form-item>
             <!--<el-form-item label="小区">-->
             <!--<el-input v-model="publishHouse.community.title" style="margin-left:15px; width:70%"></el-input>-->
             <!--</el-form-item>-->
             <el-form-item label="小区">
-                <el-select v-model="value" placeholder="请选择">
+                <el-select :value="publishHouse.uid" @input="recordUserData('uid', $event)" placeholder="请选择">
                     <el-option
                             v-for="item in options"
                             :label="item.label"
@@ -98,14 +97,14 @@
     export default {
         data() {
             return {
-                newImg: ''
+                newImg: '',
             }
         },
         computed: {
             ...mapGetters({
                 options: 'options',
                 publishHouse: 'publishHouse',
-                rules2: 'rules2'
+                rules2: 'rules2',
             }),
         },
         methods: {
@@ -120,7 +119,7 @@
 
                 var previewer = document.getElementById("showimg" + num);
                 var reader = new FileReader();
-                reader.onload = function(evt) {
+                reader.onload = function (evt) {
                     var result = this.result;
 
                     previewer.src = evt.target.result;
@@ -128,25 +127,12 @@
                 reader.readAsDataURL(e.target.files[0])
 
                 this.$store.commit('setImgs', {
-                    value:e.target.files[0]
+                    num: num,
+                    value: e.target.files[0]
                 });
-
             },
             onSubmit (formName) {
-                // 检查表单合法性
-                this.$refs["house"].validate((valid) => {
-                    if (valid) {
-                        // 提交注册表单
-                            this.$store.dispatch('submitHouse');
-                    } else {
-                        Notification({
-                            title: '出错了',
-                            message: '请先完善表单！',
-                            type: 'error'
-                        })
-                        return false
-                    }
-                })
+                this.$store.dispatch('submitHouse');
             },
 //            onSubmit: function () {
 //                let arrImg = new Array(this.img.img1, this.img.img2, this.img.img3, this.img.img4, this.img.img5);
@@ -238,5 +224,24 @@
         width: 300px;
         margin-left: 90px;
         display: block;
+    }
+
+    .tip {
+        transition: background-color 0.3s ease;
+        border-color: rgba(0, 0, 0, 0.34902);
+        background-color: rgb(214, 235, 217);
+        font-size: 12px;
+        font-family: Consolas, monospace, serif;
+        color: #0889dd;
+        white-space: nowrap;
+        padding: 0 4px;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        background: #fafafa;
+    }
+
+    .el-input{
+        width: 400px;
+        vertical-align:middle;
     }
 </style>
