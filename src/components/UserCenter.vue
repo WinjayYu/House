@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <label for="image" style="margin-left: 30%">更改图像</label>
+            <label class="head" for="image" >更改头像</label>
             <!--<el-form-item label="头像url">-->
                 <!--<el-input v-model="form.head" style="width:70%"></el-input>-->
             <!--</el-form-item>-->
@@ -155,6 +155,15 @@
         cursor: inherit;
         display: block;
 
+    }
+    .head {
+        color: #fff;
+        background-color: #20a0ff;
+        border: 1px solid #c0ccda;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 4px;
+        margin-left: 100px;
     }
 
 </style>

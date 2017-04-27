@@ -5,7 +5,6 @@
                 <el-input v-model="publishHouse.title" required></el-input>
             </el-form-item>
 
-
                  <el-form-item>
                         <span style="color: #5e6d82">房屋图片</span><span class="tip">至少一张</span>
                         <div  v-bind:class="{active:publishHouse.imgs[0]}">
@@ -58,8 +57,17 @@
             <el-form-item label="朝向">
                 <el-input v-model="publishHouse.orientation" ></el-input>
             </el-form-item>
+            <!--<el-form-item label="楼层">-->
+                <!--<el-input v-model="publishHouse.floor" ></el-input>-->
+            <!--</el-form-item>-->
             <el-form-item label="楼层">
-                <el-input v-model="publishHouse.floor" ></el-input>
+                <el-select :value="publishHouse.floor" @input="recordUserData('floor', $event)" placeholder="请选择">
+                    <el-option
+                            v-for="item in floors"
+                            :label="item.label"
+                            :value="item.value">
+                    </el-option>
+                </el-select>
             </el-form-item>
             <el-form-item label="特色">
                 <el-input v-model="publishHouse.feature" ></el-input>
@@ -104,8 +112,33 @@
             ...mapGetters({
                 options: 'options',
                 publishHouse: 'publishHouse',
-                rules2: 'rules2',
+                floors: 'floors',
+                rules2: 'rules2'
             }),
+        },
+        created() {
+            var _this = this;
+            var user = sessionStorage.getItem('user');
+            if (user) {
+                user = JSON.parse(user);
+
+                if((user.type !== '20') && (user.type !== '30')){
+                    this.$notify({
+                        title: '提示',
+                        message: "您不是经纪人，没有权限发布房源！",
+                        type: 'error'
+                    });
+                    setTimeout(function(){_this.$router.push('/House')}, 3000);
+                }
+                this.publishHouse.agentId = user.id;
+            }else {
+                this.$notify({
+                    title: '提示',
+                    message: "发布房源请先登录！",
+                    type: 'error'
+                });
+                setTimeout(function(){_this.$router.push('/login')}, 3000);
+            }
         },
         methods: {
             // 根据输入数据的类型存储用户输入信息
@@ -132,8 +165,10 @@
                 });
             },
             onSubmit (formName) {
-                this.$store.dispatch('submitHouse');
-            },
+                this.$store.dispatch('submitHouse').then(data => {
+                    console.log(data);
+                    this.$router.push('/House');
+                })
 //            onSubmit: function () {
 //                let arrImg = new Array(this.img.img1, this.img.img2, this.img.img3, this.img.img4, this.img.img5);
 //                this.publishHouse.imgs = arrImg;
@@ -169,6 +204,7 @@
 //                this.form.sex = user.sex;
 //            }
 //        }
+            }
         }
     }
 </script>
@@ -243,5 +279,9 @@
     .el-input{
         width: 400px;
         vertical-align:middle;
+    }
+
+    .el-tabs {
+        margin-left: 200px;
     }
 </style>

@@ -48,6 +48,7 @@
             list: 'orderList'
         }),
         created() {
+            var _this = this;
             var user = sessionStorage.getItem('user');
             if (user) {
                 user = JSON.parse(user);
@@ -63,6 +64,7 @@
                     message: "查看订单请先登录！",
                     type: 'error'
                 });
+                setTimeout(function(){_this.$router.push('/login')}, 3000);
             }
         },
 

@@ -24,6 +24,16 @@ const state = {
         value: 'B001B0K7DH',
         label: '保利花园'
     }],
+    floors: [{
+        value: '低',
+        label: '低'
+    }, {
+        value: '中',
+        label: '中'
+    }, {
+        value: '高',
+        label: '高'
+    }],
     img:{
         img1:'',
         img2:'',
@@ -49,14 +59,16 @@ const state = {
         feature: '',
         city: '',
         uid: '',
-        agent: ''
-    }
+        agentId: ''
+    },
+    activeUrl:''
 };
 
 const getters = {
     options: state => state.options,
     publishHouse: state => state.publishHouse,
-    rules2: state => state.rules
+    rules2: state => state.rules,
+    floors: state => state.floors
 }
 
 const mutations = {
@@ -64,8 +76,11 @@ const mutations = {
       switch (mess.name) {
           case 'uid':
               state.publishHouse.uid = mess.value;
+              break;
+          case 'floor':
+              state.publishHouse.floor = mess.value;
+              break;
       }
-      console.log(state.publishHouse.uid);
     },
     setImgs: (state, mess) => {
         state.publishHouse.imgs.push(mess.value);
@@ -100,18 +115,15 @@ const actions =　{
         formData.append("feature", context.getters.publishHouse.feature);
         formData.append("city", context.getters.publishHouse.city);
         formData.append("uid", context.getters.publishHouse.uid);
-        formData.append("agent", context.getters.publishHouse.agent);
-        console.log(formData);
+        formData.append("agentId", context.getters.publishHouse.agentId);
         Api.publishHouse(formData).then(response => {
-            let _this = this;
+            console.log(typeof response.data.status);
             if (response.data.status !== 0) {
                 Message.error({
                     title: '错误',
                     message: "发布失败！",
                     type: 'error'
                 });
-            } else {
-                _this.$router.replace('/House');
             }
 
         }).catch((e) => {

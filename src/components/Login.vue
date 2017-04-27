@@ -55,7 +55,7 @@
                         var loginParams = {mobile: this.ruleForm2.account, password: this.ruleForm2.checkPass};
                         Api.login(loginParams).then(response => {
                             this.logining = false;
-                            if (response.data.status !== 0) {
+                            if (response.data.status.toString() !== '0') {
                                 this.$notify({
                                     title: '错误',
                                     message: "用户名或密码错误！",
@@ -71,7 +71,7 @@
                         }).catch((e) => {
                             this.$notify({
                                 title: '错误',
-                                message: "用户名或密码错误！",
+                                message: "系统出错！",
                                 type: 'error'
                             });
                         });

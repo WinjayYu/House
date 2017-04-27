@@ -103,43 +103,37 @@ img {
 
             <el-row type="flex" justify="center">
                 <el-col :span="6">
-                    <h1>佣金：{{ house.commission }}元</h1></div>
+                    <h1>佣金：{{ house.commission }}元</h1>
                 </el-col>
                 <el-col :span="6">
-                    <h1>价格：{{ house.price }}万</h1></div>
+                    <h1>价格：{{ house.price }}万</h1>
                 </el-col>
                 <el-col :span="6">
-                    <h1>面积：{{ house.area }}m²</h1></div>
+                    <h1>面积：{{ house.area }}m²</h1>
                 </el-col>
             </el-row>
 
             <el-row type="flex" justify="center">
                 <el-col :span="6">
                     <p>户型：{{ house.layout }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>装修：{{ house.renovation }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>楼层：{{ house.floor }}</p>
-                    </div>
                 </el-col>
             </el-row>
 
             <el-row type="flex" justify="center">
                 <el-col :span="6">
                     <p>朝向：{{ house.orientation }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>用途：{{ house.purpose }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>发布：{{ house.year }}</p>
-                    </div>
                 </el-col>
             </el-row>
 
@@ -156,57 +150,49 @@ img {
                 <img :src="src"></img>
             </div>
 
-            </br>
+            <br />
 
             <el-form :inline="true" :model="house">
                 <el-button v-for="tag in house.tags" type="info" size="small">{{ tag }}</el-button>
             </el-form>
 
-            </br>
+            <br />
 
             <el-row type="flex" justify="center">
                 <el-col :span="6">
-                    <h1>价格：{{ house.price }}万</h1></div>
+                    <h1>价格：{{ house.price }}万</h1>
                 </el-col>
                 <el-col :span="6">
-                    <h1>面积：{{ house.area }}m²</h1></div>
+                    <h1>面积：{{ house.area }}m²</h1>
                 </el-col>
                 <el-col :span="6">
-                    <h1>佣金：{{ house.commission }}元</h1></div>
+                    <h1>佣金：{{ house.commission }}元</h1>
                 </el-col>
             </el-row>
 
             <el-row type="flex" justify="center">
                 <el-col :span="6">
                     <p>户型：{{ house.layout }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>装修：{{ house.renovation }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>楼层：{{ house.floor }}</p>
-                    </div>
                 </el-col>
             </el-row>
 
             <el-row type="flex" justify="center">
                 <el-col :span="6">
                     <p>朝向：{{ house.orientation }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>用途：{{ house.purpose }}</p>
-                    </div>
                 </el-col>
                 <el-col :span="6">
                     <p>发布：{{ house.year }}</p>
-                    </div>
                 </el-col>
             </el-row>
-
-            </br>
             <el-row type="flex" justify="center">
                 <el-col :span="21">
                     <el-collapse v-for="(val, key, index) in house.feature" v-model="activeName" accordion>
@@ -216,8 +202,6 @@ img {
                     </el-collapse>
                 </el-col>
             </el-row>
-
-            </br>
             <el-row type="flex" justify="center">
                 <el-col :span="21">
                     <p style="font-weight: bold;">小区：{{ house.community.name }}</p>
@@ -283,7 +267,7 @@ export default {
         return {
 
             currentPage: 1,
-            pageSize: 50,
+            pageSize: 8,
             mobile: '',
             height: window.screen.availHeight - 280,
             activeName: 0,
