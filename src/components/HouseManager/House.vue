@@ -25,18 +25,6 @@ img {
 <template>
 
 <section>
-    <!--工具条-->
-    <el-col :span="24" class="toolbar">
-        <el-form :inline="true" :model="formInline" class="demo-form-inline">
-            <el-form-item>
-                <el-input v-model="mobile" placeholder="手机号"></el-input>
-            </el-form-item>
-            <el-form-item>
-                <el-button @click="handleSearch">查询</el-button>
-            </el-form-item>
-        </el-form>
-    </el-col>
-
     <!--列表-->
     <template>
         <el-table :data="list" highlight-current-row v-loading="listLoading" border style="width: 100%;top: 0px;

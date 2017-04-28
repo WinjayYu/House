@@ -92,4 +92,33 @@
 		margin-right: 10px;
 	}
 
+	.headdiv {
+		width: 150px;
+		height: 150px;
+		box-shadow: 0 0 8px 2px #999;
+		border-radius: 75px;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+		margin: 10px auto;
+		/*height: 128px;*/
+		/*width: 128px;*/
+		/*overflow: hidden;*/
+		/*border: 4px solid #97a8be;*/
+		/*position: relative;*/
+		/*border-radius: 50%;*/
+		/*margin: 0px auto 10px;*/
+	}
+
+	.headimg {
+		width: 100%;
+		height: 100%;
+		/*width: 300px;*/
+		/*position: absolute;*/
+		/*left: -80px;*/
+		/*top: -40px;*/
+	}
+
+
+
 </style>

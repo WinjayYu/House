@@ -15,7 +15,10 @@
 
                 <el-dropdown trigger="click" v-if="this.mobile">
                         <span class="el-dropdown-link" style="color:#c0ccda;cursor: pointer;">
-                            <img :src="this.sysUserAvatar" class="head" style="width: 40%; margin-left: 80px; border-radius:50%"></span>
+                            <div class="headdiv" style="margin:0 0 5px 55px;">
+                            <img :src="this.sysUserAvatar" class="headimg">
+                        </div>
+                        </span>
                     <el-dropdown-menu slot="dropdown">
                         <el-dropdown-item @click.native="userCenter">个人中心</el-dropdown-item>
                         <el-dropdown-item>设置</el-dropdown-item>

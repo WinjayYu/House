@@ -8,13 +8,14 @@ import {Message} from 'element-ui';
 const state = {
     userList: [],
     userPage: {},
-    user: {}
+    user: {},
 }
 
 // getters
 const getters = {
     userList: state => state.userList,
-    userPage: state => state.userPage
+    userPage: state => state.userPage,
+    userInfo: state => state.userInfo
 }
 
 //actions
@@ -57,6 +58,19 @@ const mutations = {
     },
     [POST_USER_LIST_FAIL] (state, err) {
         console.log(err)
+    },
+    // 更新用户本地资料缓存
+    updateUserLocalStorage: (state, data) => {
+        switch (data.name) {
+            case 'avatar':
+                state.userInfo.avatar = data.value
+                console.log(data.value);
+                newData.avatar = data.value;
+                window.localStorage.userInfo = JSON.stringify(newData);
+                break;
+            default:
+                break;
+        }
     }
 }
 
