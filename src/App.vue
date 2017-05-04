@@ -93,8 +93,8 @@
 	}
 
 	.headdiv {
-		width: 150px;
-		height: 150px;
+		width: 100px;
+		height: 100px;
 		box-shadow: 0 0 8px 2px #999;
 		border-radius: 75px;
 		overflow: hidden;

@@ -26,7 +26,7 @@
                     </el-dropdown-menu>
                 </el-dropdown>
             <aside>
-                <el-menu style="border-top: 1px solid #475669;" default-active="/echarts" class="el-menu-vertical-demo"
+                <el-menu style="border-top: 1px solid #475669;" default-active="/House" class="el-menu-vertical-demo"
                          @open="handleopen"
                          @close="handleclose" @select="handleselect" theme="dark" unique-opened router>
                     <template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
@@ -145,7 +145,6 @@
                 this.$router.replace('/login');
             },
             userCenter() {
-                console.log("----");
                 this.$router.replace('/userCenter');
             },
 
@@ -187,7 +186,6 @@
             var user = sessionStorage.getItem('user');
             if (user) {
                 user = JSON.parse(user);
-                console.log(user.username);
                 this.sysUserName = user.username;
                 this.sysUserAvatar = user.head;
                 this.mobile = user.mobile;

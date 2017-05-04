@@ -5,12 +5,13 @@ import Api from '../../api/api'
 import {Message} from 'element-ui';
 
 const state = {
-    orderList: []
+    orderList: [],
+    myorderList: []
 }
 
 const getters = {
-    orderList: state => state.orderList //不要花括号
-
+    orderList: state => state.orderList, //不要花括号
+    myorderList: state => state.myorderList
 }
 
 const actions = {
@@ -21,15 +22,28 @@ const actions = {
                 } else {
                     Message.error(response.data.msg)
                 }
+            }, error => {
+                console.log("出错了");
             }
-            ,
-            error => {
+        ).catch((e) => {
+
+        });
+    },
+    myorderList({ commit }, params) {
+        Api.myorderList(params).then(response => {
+                if (response.data.status === 0) {
+                    commit('MYORDERlIST', response.data);
+                } else {
+                    Message.error(response.data.msg)
+                }
+            }, error => {
                 console.log("出错了");
             }
         ).catch((e) => {
 
         });
     }
+
 }
 
 
@@ -38,6 +52,9 @@ const mutations = {
         state.orderList = data.data.list
         // console.log(state.orderList)
     },
+    MYORDERlIST(state, data) {
+        state.myorderList = data.data.list
+    }
 }
 
 export default {

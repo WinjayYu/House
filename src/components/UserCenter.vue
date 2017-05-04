@@ -159,7 +159,9 @@
                 if (_user1.hasOwnProperty("addTime")) {
                     delete _user1.addTime;
                 }
-                console.log(_user1);
+                if (_user1.hasOwnProperty("password")) {
+                    delete _user1.password;
+                }
                 Api.update(this.user).then(response => {
                     this.logining = false;
                     let _this = this;

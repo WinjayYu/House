@@ -81,7 +81,7 @@ img {
 
     <!--分页-->
     <el-col :span="24" class="toolbar" style="padding-bottom:10px;">
-        <el-pagination :current-page="this.currentPage" :page-size="this.pageSize" layout="total, prev, pager, next, jumper" @current-change="handleCurrentChange" :total="page.totalNum" style="float:right">
+            <el-pagination :current-page="this.currentPage" :page-size="this.pageSize" layout="total, prev, pager, next, jumper" @current-change="handleCurrentChange" :total="page.totalNum" style="float:right">
         </el-pagination>
     </el-col>
 
@@ -185,7 +185,7 @@ img {
                 <el-col :span="21">
                     <el-collapse v-for="(val, key, index) in house.feature" v-model="activeName" accordion>
                         <el-collapse-item :title="formatFeature(key)" :name="index">
-                            <div>{{ val }}}</div>
+                            <div>{{ val.replace(/.$/, '。') }}}</div>
                         </el-collapse-item>
                     </el-collapse>
                 </el-col>

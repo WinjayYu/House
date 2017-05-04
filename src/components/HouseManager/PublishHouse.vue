@@ -35,10 +35,10 @@
             </el-form-item>
 
             <el-form-item label="价格">
-                <el-input v-model="publishHouse.price" ></el-input>
+                <el-input v-model.number="publishHouse.price" type="number"></el-input>
             </el-form-item>
             <el-form-item label="面积">
-                <el-input v-model="publishHouse.area"></el-input>
+                <el-input v-model.number="publishHouse.area" type="number"></el-input>
             </el-form-item>
             <el-form-item label="样式">
                 <el-radio class="radio" v-model="publishHouse.layout" label="1室1厅1卫">1室1厅1卫</el-radio>
@@ -48,7 +48,7 @@
             </el-form-item>
             <el-row>
                 <el-form-item label="年限">
-                    <el-input v-model="publishHouse.year" ></el-input>
+                    <el-input v-model.number="publishHouse.year" type="number"></el-input>
                 </el-form-item>
             </el-row>
             <el-form-item label="装修程度">
@@ -73,7 +73,7 @@
                 <el-input v-model="publishHouse.feature" ></el-input>
             </el-form-item>
             <el-form-item label="城市">
-                <el-input v-model="publishHouse.city" placeholder="目前支持武汉地区"></el-input>
+                <el-input v-model="publishHouse.city" placeholder="目前仅支持武汉地区"></el-input>
             </el-form-item>
             <!--<el-form-item label="小区">-->
             <!--<el-input v-model="publishHouse.community.title" style="margin-left:15px; width:70%"></el-input>-->

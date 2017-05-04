@@ -84,8 +84,7 @@
                                 });
                             } else {
                                 sessionStorage.setItem('user', JSON.stringify(response.data.data.user));
-//                      console.log("---"+response.data.data.user.username);
-//                      console.log(response.data.status);
+
                                 _this.$router.replace('/House');
                             }
 

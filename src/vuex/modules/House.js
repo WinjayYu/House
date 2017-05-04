@@ -57,25 +57,24 @@ const actions = {
   },
   //审核操作
   reviewHouse({ commit,dispatch }, params){
-    Api.reviewHouse(params).then(response => {
-      if(response.data.status == 0)
-      {
-          Message.success("操作成功")
-          let params = {
-              pageNum: 1,
-              pageSize: 50,
-              status: '10'
+      Api.reviewHouse(params).then(response => {
+          if (response.data.status == 0) {
+              Message.success("操作成功")
+              let params = {
+                  pageNum: 1,
+                  pageSize: 50,
+                  status: '10'
+              }
+              dispatch('uncheckHouseList', params)
+          } else {
+              {
+                  Message.error(response.data.msg)
+              }
           }
-          dispatch('uncheckHouseList', params)
-      }else {
-      {
-        Message.error(response.data.msg)
-      }
-    }
-    }, err => {
-      console.log(err)
-    })
-  },
+      }, err => {
+          console.log(err)
+      })
+  }
 }
 
 const mutations = {
